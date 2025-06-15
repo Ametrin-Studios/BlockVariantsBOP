@@ -1,0 +1,13 @@
+{
+  "itemGroup.block_variants_bop": "Example Mod Tab",
+  "block.block_variants_bop.example_block": "Example Block",
+  "item.block_variants_bop.example_item": "Example Item",
+
+  "block_variants_bop.configuration.title": "Block Variants - Biomes O' Plenty Configs",
+  "block_variants_bop.configuration.section.block_variants_bop.common.toml": "Block Variants - Biomes O' Plenty Configs",
+  "block_variants_bop.configuration.section.block_variants_bop.common.toml.title": "Block Variants - Biomes O' Plenty Configs",
+  "block_variants_bop.configuration.items": "Item List",
+  "block_variants_bop.configuration.logDirtBlock": "Log Dirt Block",
+  "block_variants_bop.configuration.magicNumberIntroduction": "Magic Number Text",
+  "block_variants_bop.configuration.magicNumber": "Magic Number"
+}
