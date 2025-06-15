@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block_variants_bop:block/magic_log_slab"
+    },
+    "type=double": {
+      "model": "biomesoplenty:block/magic_log"
+    },
+    "type=top": {
+      "model": "block_variants_bop:block/magic_log_slab_top"
+    }
+  }
+}

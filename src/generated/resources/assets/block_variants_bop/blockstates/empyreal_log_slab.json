@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block_variants_bop:block/empyreal_log_slab"
+    },
+    "type=double": {
+      "model": "biomesoplenty:block/empyreal_log"
+    },
+    "type=top": {
+      "model": "block_variants_bop:block/empyreal_log_slab_top"
+    }
+  }
+}

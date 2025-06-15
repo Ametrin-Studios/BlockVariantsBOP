@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block_variants_bop:block/pine_wood_slab"
+    },
+    "type=double": {
+      "model": "biomesoplenty:block/pine_wood"
+    },
+    "type=top": {
+      "model": "block_variants_bop:block/pine_wood_slab_top"
+    }
+  }
+}

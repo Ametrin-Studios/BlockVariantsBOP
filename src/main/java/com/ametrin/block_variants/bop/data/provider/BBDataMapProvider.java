@@ -1,6 +1,5 @@
 package com.ametrin.block_variants.bop.data.provider;
 
-import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.barion.block_variants.registry.BVTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -22,8 +21,6 @@ public final class BBDataMapProvider extends DataMapProvider {
     protected void gather(@NotNull HolderLookup.Provider provider) {
         builder(NeoForgeDataMaps.FURNACE_FUELS)
                 .add(BVTags.Items.WOODEN_WALLS, new FurnaceFuel(AbstractFurnaceBlockEntity.BURN_TIME_STANDARD * 3 / 2), false)
-                .add(BBBlocks.FIR_WOOD_FENCE_GATE.getId(), new FurnaceFuel(AbstractFurnaceBlockEntity.BURN_TIME_STANDARD * 3 / 2), false)
-                .add(BBBlocks.STRIPPED_FIR_WOOD_FENCE_GATE.getId(), new FurnaceFuel(AbstractFurnaceBlockEntity.BURN_TIME_STANDARD * 3 / 2), false)
         ;
     }
 }

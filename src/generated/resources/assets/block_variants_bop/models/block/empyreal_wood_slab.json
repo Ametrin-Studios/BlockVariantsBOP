@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "biomesoplenty:block/empyreal_log",
+    "side": "biomesoplenty:block/empyreal_log",
+    "top": "biomesoplenty:block/empyreal_log"
+  }
+}

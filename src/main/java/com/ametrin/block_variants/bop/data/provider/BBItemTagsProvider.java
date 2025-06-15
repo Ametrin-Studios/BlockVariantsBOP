@@ -8,7 +8,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -25,6 +24,6 @@ public final class BBItemTagsProvider extends ExtendedItemTagsProvider {
         copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
         copy(BVTags.Blocks.WOODEN_WALLS, BVTags.Items.WOODEN_WALLS);
         copy(BlockTags.WOODEN_FENCES, ItemTags.WOODEN_FENCES);
-        copy(Tags.Blocks.FENCE_GATES_WOODEN, Tags.Items.FENCE_GATES_WOODEN);
+        copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
     }
 }

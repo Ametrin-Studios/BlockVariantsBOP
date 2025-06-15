@@ -2,12 +2,6 @@
   "values": {
     "#c:wooden_walls": {
       "burn_time": 300
-    },
-    "block_variants_bop:fir_wood_fence_gate": {
-      "burn_time": 300
-    },
-    "block_variants_bop:stripped_fir_wood_fence_gate": {
-      "burn_time": 300
     }
   }
 }

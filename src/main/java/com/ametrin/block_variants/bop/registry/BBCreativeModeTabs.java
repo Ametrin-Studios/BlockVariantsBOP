@@ -16,8 +16,8 @@ public final class BBCreativeModeTabs {
     public static final Supplier<CreativeModeTab> BLOCK_VARIANTS_BOP = REGISTER.register("main", () -> CreativeModeTab.builder()
             .title(Component.translatable(BLOCK_VARIANTS_BOP_TRANSLATION_KEY))
             .withTabsBefore(ResourceLocation.fromNamespaceAndPath(BiomesOPlenty.MOD_ID, "main"))
-            .icon(() -> BBBlocks.FIR_LOG_STAIRS.asItem().getDefaultInstance())
-            .displayItems((parameters, output) -> BBBlocks.getAllBlocks().forEach(output::accept))
+            .icon(() -> BBWoodBlocks.FIR_LOG_STAIRS.asItem().getDefaultInstance())
+            .displayItems((parameters, output) -> BBWoodBlocks.getAllBlocks().forEach(output::accept))
             .build()
     );
 }
