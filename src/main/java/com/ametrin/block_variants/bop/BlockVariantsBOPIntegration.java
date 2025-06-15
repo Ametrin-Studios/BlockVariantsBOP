@@ -1,6 +1,7 @@
 package com.ametrin.block_variants.bop;
 
-import com.ametrin.block_variants.bop.data.provider.BBModelProvider;
+import com.ametrin.block_variants.bop.data.provider.*;
+import com.ametrin.block_variants.bop.data.provider.loot.BBBlockLootProvider;
 import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBCreativeModeTabs;
 import com.ametrin.block_variants.bop.registry.BBItems;
@@ -38,5 +39,12 @@ public final class BlockVariantsBOPIntegration {
 
     private static void gatherData(GatherDataEvent.Client event) {
         event.createProvider(BBModelProvider::new);
+        event.createProvider(BBRecipeProvider.Runner::new);
+        event.createProvider(BBLanguageProvider::new);
+        event.createProvider(BBDataMapProvider::new);
+        event.createBlockAndItemTags(BBBlockTagsProvider::new, BBItemTagsProvider::new);
+        event.createProvider(CustomLootTableProvider.builder()
+                .addBlockProvider(BBBlockLootProvider::new)
+                ::build);
     }
 }

@@ -1,0 +1,6 @@
+// 1.21.5	2025-06-15T21:14:30.4161386	Tags for minecraft:item mod id block_variants_bop
+1a97c23b3e0e150098909d5f5be5e7b4ab86875f data/c/tags/item/fence_gates/wooden.json
+39ba6d69b9aee3b6f6da90dc1f6766eb8444fb2e data/c/tags/item/wooden_walls.json
+301dcf51c9bb0a9fb3c5da1b652f4b99481262f9 data/minecraft/tags/item/wooden_fences.json
+680e6f6b1c5e47280a3e84294c9f0a35f4eafaa2 data/minecraft/tags/item/wooden_slabs.json
+4ea5899ac0d5f1c179e6cca35eeb3db1309d3117 data/minecraft/tags/item/wooden_stairs.json
