@@ -4,16 +4,15 @@ import biomesoplenty.api.block.BOPBlocks;
 import biomesoplenty.api.block.BOPWoodTypes;
 import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
 import com.barion.block_variants.block.*;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
+
+import static com.ametrin.block_variants.bop.registry.BBBlocks.register;
 
 public final class BBWoodBlocks {
     public static final DeferredRegister.Blocks REGISTER = DeferredRegister.createBlocks(BlockVariantsBOPIntegration.MOD_ID);
@@ -229,22 +228,7 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<FenceBlock> STRIPPED_EMPYREAL_WOOD_FENCE = register("stripped_empyreal_wood_fence", properties -> new FenceBlock(properties.mapColor(BOPBlocks.STRIPPED_EMPYREAL_WOOD.defaultMapColor())), BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD));
     public static final DeferredBlock<FenceGateBlock> STRIPPED_EMPYREAL_WOOD_FENCE_GATE = register("stripped_empyreal_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.EMPYREAL, properties.mapColor(BOPBlocks.STRIPPED_EMPYREAL_WOOD.defaultMapColor())), BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD));
 
-
-    private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> block, BlockBehaviour.Properties properties) {
-        return register(name, block, properties, new Item.Properties());
-    }
-
-    private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> block, BlockBehaviour.Properties properties, Item.Properties itemProperties) {
-        var registryObject = registerWithoutItem(name, block, properties);
-        BBItems.REGISTER.registerItem(name, iproperties -> new BlockItem(registryObject.get(), iproperties), itemProperties);
-        return registryObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerWithoutItem(String name, Function<BlockBehaviour.Properties, T> block, BlockBehaviour.Properties properties) {
-        return REGISTER.registerBlock(name, block, properties);
-    }
-
-    public static Stream<Block> getAllBlocks() {
+    public static Stream<Block> getAllWoodBlocks() {
         return REGISTER.getEntries().stream().map(Supplier::get);
     }
 }

@@ -1,5 +1,9 @@
 {
   "values": [
+    "block_variants_bop:flesh_wall",
+    "block_variants_bop:porous_flesh_wall",
+    "block_variants_bop:brimstone_wall",
+    "block_variants_bop:rose_quartz_block_wall",
     "block_variants_bop:fir_wood_wall",
     "block_variants_bop:stripped_fir_wood_wall",
     "block_variants_bop:pine_wood_wall",
@@ -24,6 +28,8 @@
     "block_variants_bop:stripped_umbran_wood_wall",
     "block_variants_bop:hellbark_wood_wall",
     "block_variants_bop:stripped_hellbark_wood_wall",
+    "block_variants_bop:empyreal_wood_wall",
+    "block_variants_bop:stripped_empyreal_wood_wall",
     "#c:wooden_walls"
   ]
 }

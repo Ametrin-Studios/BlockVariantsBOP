@@ -2,6 +2,7 @@ package com.ametrin.block_variants.bop.data.provider;
 
 import biomesoplenty.api.block.BOPBlocks;
 import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
+import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.ExtendedModelProvider;
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -22,6 +23,11 @@ public final class BBModelProvider extends ExtendedModelProvider {
 
     @Override
     protected void registerModels(@NotNull BlockModelGenerators blockModels, @NotNull ItemModelGenerators itemModels) {
+        blockModels.familyWithExistingFullBlock(BOPBlocks.FLESH).stairs(BBBlocks.FLESH_STAIRS.get()).slab(BBBlocks.FLESH_SLAB.get()).wall(BBBlocks.FLESH_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.POROUS_FLESH).stairs(BBBlocks.POROUS_FLESH_STAIRS.get()).slab(BBBlocks.POROUS_FLESH_SLAB.get()).wall(BBBlocks.POROUS_FLESH_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.BRIMSTONE).stairs(BBBlocks.BRIMSTONE_STAIRS.get()).slab(BBBlocks.BRIMSTONE_SLAB.get()).wall(BBBlocks.BRIMSTONE_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.ROSE_QUARTZ_BLOCK).stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get()).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get()).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get());
+
         // FIR
         logStairsSlab(blockModels, BOPBlocks.FIR_LOG, BBWoodBlocks.FIR_LOG_STAIRS.get(), BBWoodBlocks.FIR_LOG_SLAB.get());
         logStairsSlab(blockModels, BOPBlocks.STRIPPED_FIR_LOG, BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS.get(), BBWoodBlocks.STRIPPED_FIR_LOG_SLAB.get());

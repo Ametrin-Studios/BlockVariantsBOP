@@ -1,6 +1,7 @@
 package com.ametrin.block_variants.bop.data.provider;
 
 import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
+import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBCreativeModeTabs;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.ExtendedLanguageProvider;
@@ -15,6 +16,12 @@ public final class BBLanguageProvider extends ExtendedLanguageProvider {
     @Override
     protected void addTranslations() {
         add(BBCreativeModeTabs.BLOCK_VARIANTS_BOP_TRANSLATION_KEY, "Block Variants - Biomes O' Plenty");
+
+        family("Flesh").stairs(BBBlocks.FLESH_STAIRS).slab(BBBlocks.FLESH_SLAB).wall(BBBlocks.FLESH_WALL);
+        family("Porous Flesh").stairs(BBBlocks.POROUS_FLESH_STAIRS).slab(BBBlocks.POROUS_FLESH_SLAB).wall(BBBlocks.POROUS_FLESH_WALL);
+        family("Brimstone").stairs(BBBlocks.BRIMSTONE_STAIRS).slab(BBBlocks.BRIMSTONE_SLAB).wall(BBBlocks.BRIMSTONE_WALL);
+
+        family("Rose Quartz").stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL);
 
         family("Fir Log").stairs(BBWoodBlocks.FIR_LOG_STAIRS).slab(BBWoodBlocks.FIR_LOG_SLAB);
         family("Stripped Fir Log").stairs(BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_FIR_LOG_SLAB);

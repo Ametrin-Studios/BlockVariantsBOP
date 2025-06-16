@@ -2,6 +2,7 @@ package com.ametrin.block_variants.bop;
 
 import com.ametrin.block_variants.bop.data.provider.*;
 import com.ametrin.block_variants.bop.data.provider.loot.BBBlockLootProvider;
+import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBCreativeModeTabs;
 import com.ametrin.block_variants.bop.registry.BBItems;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
@@ -19,6 +20,7 @@ public final class BlockVariantsBOPIntegration {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public BlockVariantsBOPIntegration(IEventBus modBus, ModContainer modContainer) {
+        BBBlocks.REGISTER.register(modBus);
         BBWoodBlocks.REGISTER.register(modBus);
         BBItems.REGISTER.register(modBus);
         BBCreativeModeTabs.REGISTER.register(modBus);

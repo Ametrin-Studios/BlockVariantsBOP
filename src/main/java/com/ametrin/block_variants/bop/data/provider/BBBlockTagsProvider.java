@@ -1,6 +1,7 @@
 package com.ametrin.block_variants.bop.data.provider;
 
 import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
+import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.ExtendedBlockTagsProvider;
 import com.barion.block_variants.registry.BVTags;
@@ -21,7 +22,39 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
 
     @Override
     protected void addTags(@NotNull HolderLookup.Provider provider) {
-        var mineableWithAxe = tag(BlockTags.MINEABLE_WITH_AXE);
+        var mineableWithAxe = tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(BBBlocks.FLESH_STAIRS.getKey())
+                .add(BBBlocks.FLESH_SLAB.getKey())
+                .add(BBBlocks.FLESH_WALL.getKey())
+                .add(BBBlocks.POROUS_FLESH_STAIRS.getKey())
+                .add(BBBlocks.POROUS_FLESH_SLAB.getKey())
+                .add(BBBlocks.POROUS_FLESH_WALL.getKey())
+        ;
+
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(BBBlocks.BRIMSTONE_STAIRS.getKey())
+                .add(BBBlocks.BRIMSTONE_SLAB.getKey())
+                .add(BBBlocks.BRIMSTONE_WALL.getKey())
+
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.getKey())
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.getKey())
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.getKey())
+        ;
+
+        var stairs = tag(BlockTags.STAIRS);
+        var slabs = tag(BlockTags.SLABS);
+        var walls = tag(BlockTags.WALLS);
+
+        for (var block : BBBlocks.REGISTER.getEntries()) {
+            if (block.value() instanceof StairBlock) {
+                stairs.add(block.getKey());
+            } else if (block.value() instanceof SlabBlock) {
+                slabs.add(block.getKey());
+            } else if (block.value() instanceof WallBlock) {
+                walls.add(block.getKey());
+            }
+        }
+
         var woodenStairs = tag(BlockTags.WOODEN_STAIRS);
         var woodenSlabs = tag(BlockTags.WOODEN_SLABS);
         var woodenWalls = tag(BVTags.Blocks.WOODEN_WALLS);
@@ -44,8 +77,7 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
             }
         }
 
-
-        tag(BlockTags.WALLS).addTag(BVTags.Blocks.WOODEN_WALLS);
+        walls.addTag(BVTags.Blocks.WOODEN_WALLS);
     }
 
     private void addAll(TagKey<Block> tag, DeferredRegister<Block> register) {

@@ -1,6 +1,6 @@
 package com.ametrin.block_variants.bop.data.provider.loot;
 
-import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
+import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrinstudios.ametrin.data.provider.loot_table.ExtendedBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.level.block.Block;
@@ -14,11 +14,11 @@ public final class BBBlockLootProvider extends ExtendedBlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(BBWoodBlocks.getAllBlocks().iterator());
+        dropSelf(BBBlocks.getAllBlocks().iterator());
     }
 
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
-        return BBWoodBlocks.REGISTER.getEntries().stream().map(holder -> (Block)holder.get()).toList();
+        return BBBlocks.getAllBlocks().toList();
     }
 }

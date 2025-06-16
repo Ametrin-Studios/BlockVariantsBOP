@@ -2,6 +2,7 @@ package com.ametrin.block_variants.bop.data.provider;
 
 import biomesoplenty.api.block.BOPBlocks;
 import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
+import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.ExtendedRecipeProvider;
 import net.minecraft.core.HolderLookup;
@@ -22,6 +23,11 @@ public final class BBRecipeProvider extends ExtendedRecipeProvider {
 
     @Override
     protected void buildRecipes() {
+        stairSlabWall(BBBlocks.FLESH_STAIRS.get(), BBBlocks.FLESH_SLAB.get(), BBBlocks.FLESH_WALL.get(), BOPBlocks.FLESH, false);
+        stairSlabWall(BBBlocks.POROUS_FLESH_STAIRS.get(), BBBlocks.POROUS_FLESH_SLAB.get(), BBBlocks.POROUS_FLESH_WALL.get(), BOPBlocks.POROUS_FLESH, false);
+        stairSlabWall(BBBlocks.BRIMSTONE_STAIRS.get(), BBBlocks.BRIMSTONE_SLAB.get(), BBBlocks.BRIMSTONE_WALL.get(), BOPBlocks.BRIMSTONE, true);
+        stairSlabWall(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get(), BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get(), BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get(), BOPBlocks.ROSE_QUARTZ_BLOCK, true);
+
         // FIR
         stairSlab(BBWoodBlocks.FIR_LOG_STAIRS.get(), BBWoodBlocks.FIR_LOG_SLAB.get(), BOPBlocks.FIR_LOG, false);
         stairSlab(BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS.get(), BBWoodBlocks.STRIPPED_FIR_LOG_SLAB.get(), BOPBlocks.STRIPPED_FIR_LOG, false);
@@ -110,6 +116,12 @@ public final class BBRecipeProvider extends ExtendedRecipeProvider {
         fence(fence, altMaterial);
         fenceGate(fenceGate, material);
         fenceGate(fenceGate, altMaterial);
+    }
+
+    private void stairSlabWall(StairBlock stair, SlabBlock slab, WallBlock wall, ItemLike material, boolean hasStonecutting) {
+        stairs(stair, material, hasStonecutting);
+        slab(slab, material, hasStonecutting);
+        wall(wall, material, hasStonecutting);
     }
 
     public void stairSlab(StairBlock stair, SlabBlock slab, ItemLike material, boolean hasStonecutting) {
