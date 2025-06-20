@@ -1,3 +1,30 @@
 {
-  "values": []
+  "values": [
+    "block_variants_bop:fir_wood_wall",
+    "block_variants_bop:stripped_fir_wood_wall",
+    "block_variants_bop:pine_wood_wall",
+    "block_variants_bop:stripped_pine_wood_wall",
+    "block_variants_bop:maple_wood_wall",
+    "block_variants_bop:stripped_maple_wood_wall",
+    "block_variants_bop:redwood_wood_wall",
+    "block_variants_bop:stripped_redwood_wood_wall",
+    "block_variants_bop:mahogany_wood_wall",
+    "block_variants_bop:stripped_mahogany_wood_wall",
+    "block_variants_bop:jacaranda_wood_wall",
+    "block_variants_bop:stripped_jacaranda_wood_wall",
+    "block_variants_bop:palm_wood_wall",
+    "block_variants_bop:stripped_palm_wood_wall",
+    "block_variants_bop:willow_wood_wall",
+    "block_variants_bop:stripped_willow_wood_wall",
+    "block_variants_bop:dead_wood_wall",
+    "block_variants_bop:stripped_dead_wood_wall",
+    "block_variants_bop:magic_wood_wall",
+    "block_variants_bop:stripped_magic_wood_wall",
+    "block_variants_bop:umbran_wood_wall",
+    "block_variants_bop:stripped_umbran_wood_wall",
+    "block_variants_bop:hellbark_wood_wall",
+    "block_variants_bop:stripped_hellbark_wood_wall",
+    "block_variants_bop:empyreal_wood_wall",
+    "block_variants_bop:stripped_empyreal_wood_wall"
+  ]
 }
