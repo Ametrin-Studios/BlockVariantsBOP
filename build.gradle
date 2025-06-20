@@ -121,17 +121,18 @@ repositories {
 dependencies {
     implementation "com.ametrinstudios:ametrin:${minecraft_version}-${ametrin_version}"
     implementation "com.ametrinstudios:block_variants:${minecraft_version}-${bv_version}"
-    implementation "curse.maven:biomes-o-plenty-220318:6602037"
-    localRuntime "curse.maven:terrablender-neoforge-940057:6465681"
-    localRuntime "curse.maven:glitchcore-955399:6398449"
+    implementation "curse.maven:biomes-o-plenty-220318:6384687"
+    localRuntime "curse.maven:terrablender-neoforge-940057:6055021" // https://www.curseforge.com/minecraft/mc-mods/terrablender-neoforge/files/all
+    localRuntime "curse.maven:glitchcore-955399:6054289" // https://www.curseforge.com/minecraft/mc-mods/glitchcore/files/all
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [
-            minecraft_version      : minecraft_version,
-            minecraft_version_range: minecraft_version_range,
-            neo_version            : neo_version,
-            neo_version_range      : neo_version_range,
+            minecraft_version       : minecraft_version,
+            minecraft_version_range : minecraft_version_range,
+            neo_version             : neo_version,
+            neo_version_range       : neo_version_range,
+            loader_version_range    : loader_version_range,
 
             ametrin_version         : ametrin_version,
             ametrin_version_range   : ametrin_version_range,
@@ -140,12 +141,12 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             bv_version_range        : bv_version_range,
             bop_version_range       : bop_version_range,
 
-            mod_id                 : mod_id,
-            mod_name               : mod_name,
-            mod_license            : mod_license,
-            mod_version            : mod_version,
-            mod_authors            : mod_authors,
-            mod_description        : mod_description
+            mod_id                  : mod_id,
+            mod_name                : mod_name,
+            mod_license             : mod_license,
+            mod_version             : mod_version,
+            mod_authors             : mod_authors,
+            mod_description         : mod_description
     ]
     inputs.properties replaceProperties
     expand replaceProperties

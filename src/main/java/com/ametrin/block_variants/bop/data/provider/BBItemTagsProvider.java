@@ -20,10 +20,13 @@ public final class BBItemTagsProvider extends ExtendedItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+        copy(BlockTags.STAIRS, ItemTags.STAIRS);
+        copy(BlockTags.SLABS, ItemTags.SLABS);
+        copy(BlockTags.WALLS, ItemTags.WALLS);
+        copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
         copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
         copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
         copy(BVTags.Blocks.WOODEN_WALLS, BVTags.Items.WOODEN_WALLS);
         copy(BlockTags.WOODEN_FENCES, ItemTags.WOODEN_FENCES);
-        copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
     }
 }
