@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:stick",
-    "W": "biomesoplenty:stripped_pine_log"
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "biomesoplenty:stripped_pine_log"
+    }
   },
   "pattern": [
     "W#W",

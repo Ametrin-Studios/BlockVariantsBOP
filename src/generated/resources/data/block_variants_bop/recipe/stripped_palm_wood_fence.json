@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:stick",
-    "W": "biomesoplenty:stripped_palm_wood"
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "biomesoplenty:stripped_palm_wood"
+    }
   },
   "pattern": [
     "W#W",

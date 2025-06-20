@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "biomesoplenty:fir_log"
+    "#": {
+      "item": "biomesoplenty:fir_log"
+    }
   },
   "pattern": [
     "###",

@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "biomesoplenty:stripped_empyreal_wood"
+    "#": {
+      "item": "biomesoplenty:stripped_empyreal_wood"
+    }
   },
   "pattern": [
     "#  ",

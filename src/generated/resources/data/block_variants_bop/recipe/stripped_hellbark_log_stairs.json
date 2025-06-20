@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "biomesoplenty:stripped_hellbark_log"
+    "#": {
+      "item": "biomesoplenty:stripped_hellbark_log"
+    }
   },
   "pattern": [
     "#  ",

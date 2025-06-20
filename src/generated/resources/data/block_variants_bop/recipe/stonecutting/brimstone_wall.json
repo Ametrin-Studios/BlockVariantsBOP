@@ -1,6 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": "biomesoplenty:brimstone",
+  "ingredient": {
+    "item": "biomesoplenty:brimstone"
+  },
   "result": {
     "count": 1,
     "id": "block_variants_bop:brimstone_wall"

@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "biomesoplenty:mahogany_log"
+    "#": {
+      "item": "biomesoplenty:mahogany_log"
+    }
   },
   "pattern": [
     "###",

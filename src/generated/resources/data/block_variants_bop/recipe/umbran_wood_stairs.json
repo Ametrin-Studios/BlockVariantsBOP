@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "biomesoplenty:umbran_wood"
+    "#": {
+      "item": "biomesoplenty:umbran_wood"
+    }
   },
   "pattern": [
     "#  ",

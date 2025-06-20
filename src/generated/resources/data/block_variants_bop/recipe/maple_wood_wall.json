@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "biomesoplenty:maple_wood"
+    "#": {
+      "item": "biomesoplenty:maple_wood"
+    }
   },
   "pattern": [
     "###",

@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "biomesoplenty:stripped_jacaranda_log"
+    "#": {
+      "item": "biomesoplenty:stripped_jacaranda_log"
+    }
   },
   "pattern": [
     "#  ",

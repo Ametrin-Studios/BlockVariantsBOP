@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "biomesoplenty:brimstone"
+    "#": {
+      "item": "biomesoplenty:brimstone"
+    }
   },
   "pattern": [
     "###",

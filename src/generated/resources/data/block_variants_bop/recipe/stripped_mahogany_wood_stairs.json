@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "biomesoplenty:stripped_mahogany_wood"
+    "#": {
+      "item": "biomesoplenty:stripped_mahogany_wood"
+    }
   },
   "pattern": [
     "#  ",

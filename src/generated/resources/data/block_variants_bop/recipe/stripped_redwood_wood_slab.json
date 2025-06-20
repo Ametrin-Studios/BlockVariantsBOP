@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "biomesoplenty:stripped_redwood_wood"
+    "#": {
+      "item": "biomesoplenty:stripped_redwood_wood"
+    }
   },
   "pattern": [
     "###"

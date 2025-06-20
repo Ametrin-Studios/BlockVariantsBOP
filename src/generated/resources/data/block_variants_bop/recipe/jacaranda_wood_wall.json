@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "biomesoplenty:jacaranda_wood"
+    "#": {
+      "item": "biomesoplenty:jacaranda_wood"
+    }
   },
   "pattern": [
     "###",

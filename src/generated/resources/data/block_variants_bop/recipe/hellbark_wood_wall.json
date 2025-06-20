@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "biomesoplenty:hellbark_wood"
+    "#": {
+      "item": "biomesoplenty:hellbark_wood"
+    }
   },
   "pattern": [
     "###",

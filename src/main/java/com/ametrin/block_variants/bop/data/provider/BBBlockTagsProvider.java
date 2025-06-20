@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
     public BBBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BlockVariantsBOPIntegration.MOD_ID);
+        super(output, registries, BlockVariantsBOPIntegration.MOD_ID, null);
     }
 
     @Override

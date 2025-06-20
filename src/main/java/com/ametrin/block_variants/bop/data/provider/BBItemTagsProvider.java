@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 public final class BBItemTagsProvider extends ExtendedItemTagsProvider {
 
     public BBItemTagsProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTagProvider) {
-        super(packOutput, lookupProvider, blockTagProvider, BlockVariantsBOPIntegration.MOD_ID);
+        super(packOutput, lookupProvider, blockTagProvider, BlockVariantsBOPIntegration.MOD_ID, null);
     }
 
     @Override

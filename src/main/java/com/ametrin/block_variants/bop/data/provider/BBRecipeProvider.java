@@ -8,21 +8,22 @@ import com.ametrinstudios.ametrin.data.provider.ExtendedRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public final class BBRecipeProvider extends ExtendedRecipeProvider {
-    public BBRecipeProvider( HolderLookup.Provider registries, RecipeOutput output, Set<ResourceLocation> recipeSet) {
-        super(BlockVariantsBOPIntegration.MOD_ID, registries, output, recipeSet);
+    private RecipeOutput output;
+    public BBRecipeProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
+        super(packOutput, BlockVariantsBOPIntegration.MOD_ID, registries);
     }
 
     @Override
-    protected void buildRecipes() {
+    protected void buildRecipes(@NotNull RecipeOutput output) {
+        this.output = output;
+
         stairSlabWall(BBBlocks.FLESH_STAIRS.get(), BBBlocks.FLESH_SLAB.get(), BBBlocks.FLESH_WALL.get(), BOPBlocks.FLESH, false);
         stairSlabWall(BBBlocks.POROUS_FLESH_STAIRS.get(), BBBlocks.POROUS_FLESH_SLAB.get(), BBBlocks.POROUS_FLESH_WALL.get(), BOPBlocks.POROUS_FLESH, false);
         stairSlabWall(BBBlocks.BRIMSTONE_STAIRS.get(), BBBlocks.BRIMSTONE_SLAB.get(), BBBlocks.BRIMSTONE_WALL.get(), BOPBlocks.BRIMSTONE, true);
@@ -108,40 +109,24 @@ public final class BBRecipeProvider extends ExtendedRecipeProvider {
     }
 
     public void recipeWoods(StairBlock stairs, SlabBlock slab, WallBlock wall, FenceBlock fence, FenceGateBlock fenceGate, ItemLike material, ItemLike altMaterial) {
-        stairs(stairs, material, false);
-        slab(slab, material, false);
-        wall(wall, material, false);
-        wall(wall, altMaterial, false);
-        fence(fence, material);
-        fence(fence, altMaterial);
-        fenceGate(fenceGate, material);
-        fenceGate(fenceGate, altMaterial);
+        stairs(output, stairs, material, false);
+        slab(output, slab, material, false);
+        wall(output, wall, material, false);
+        wall(output, wall, altMaterial, false);
+        fence(output, fence, material);
+        fence(output, fence, altMaterial);
+        fenceGate(output, fenceGate, material);
+        fenceGate(output, fenceGate, altMaterial);
     }
 
     private void stairSlabWall(StairBlock stair, SlabBlock slab, WallBlock wall, ItemLike material, boolean hasStonecutting) {
-        stairs(stair, material, hasStonecutting);
-        slab(slab, material, hasStonecutting);
-        wall(wall, material, hasStonecutting);
+        stairs(output, stair, material, hasStonecutting);
+        slab(output, slab, material, hasStonecutting);
+        wall(output, wall, material, hasStonecutting);
     }
 
     public void stairSlab(StairBlock stair, SlabBlock slab, ItemLike material, boolean hasStonecutting) {
-        stairs(stair, material, hasStonecutting);
-        slab(slab, material, hasStonecutting);
-    }
-
-    public static final class Runner extends ExtendedRecipeProvider.Runner {
-        public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
-            super(packOutput, registries);
-        }
-
-        @Override
-        protected ExtendedRecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput, Set<ResourceLocation> set) {
-            return new BBRecipeProvider(provider, recipeOutput, set);
-        }
-
-        @Override
-        public @NotNull String getName() {
-            return "Block Variants - Biomes O' Plenty recipes";
-        }
+        stairs(output, stair, material, hasStonecutting);
+        slab(output, slab, material, hasStonecutting);
     }
 }

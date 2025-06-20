@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": "minecraft:stick",
-    "W": "biomesoplenty:empyreal_log"
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "biomesoplenty:empyreal_log"
+    }
   },
   "pattern": [
     "#W#",

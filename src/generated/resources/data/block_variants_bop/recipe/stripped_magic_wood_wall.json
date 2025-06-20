@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "biomesoplenty:stripped_magic_wood"
+    "#": {
+      "item": "biomesoplenty:stripped_magic_wood"
+    }
   },
   "pattern": [
     "###",

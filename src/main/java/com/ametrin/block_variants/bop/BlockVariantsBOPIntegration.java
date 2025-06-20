@@ -27,9 +27,10 @@ public final class BlockVariantsBOPIntegration {
         modBus.addListener(BlockVariantsBOPIntegration::gatherData);
     }
 
-    private static void gatherData(GatherDataEvent.Client event) {
-        event.createProvider(BBModelProvider::new);
-        event.createProvider(BBRecipeProvider.Runner::new);
+    private static void gatherData(GatherDataEvent event) {
+        event.createProvider((output) -> new BBBlockStateProvider(output, event.getExistingFileHelper()));
+        event.createProvider(output -> new BBItemModelProvider(output, event.getExistingFileHelper()));
+        event.createProvider(BBRecipeProvider::new);
         event.createProvider(BBLanguageProvider::new);
         event.createProvider(BBDataMapProvider::new);
         event.createBlockAndItemTags(BBBlockTagsProvider::new, BBItemTagsProvider::new);

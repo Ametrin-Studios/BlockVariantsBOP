@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "biomesoplenty:maple_log"
+    "#": {
+      "item": "biomesoplenty:maple_log"
+    }
   },
   "pattern": [
     "###"
