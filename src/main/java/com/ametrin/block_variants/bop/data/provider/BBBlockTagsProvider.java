@@ -4,13 +4,13 @@ import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
 import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.ExtendedBlockTagsProvider;
-import com.barion.block_variants.registry.BVTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.TagAppender;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -23,67 +23,32 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
     @Override
     protected void addTags(@NotNull HolderLookup.Provider provider) {
         var mineableWithAxe = tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(BBBlocks.FLESH_STAIRS.getKey())
-                .add(BBBlocks.FLESH_SLAB.getKey())
-                .add(BBBlocks.FLESH_WALL.getKey())
-                .add(BBBlocks.POROUS_FLESH_STAIRS.getKey())
-                .add(BBBlocks.POROUS_FLESH_SLAB.getKey())
-                .add(BBBlocks.POROUS_FLESH_WALL.getKey())
-        ;
+                .add(BBBlocks.FLESH_STAIRS.get())
+                .add(BBBlocks.FLESH_SLAB.get())
+                .add(BBBlocks.FLESH_WALL.get())
+                .add(BBBlocks.POROUS_FLESH_STAIRS.get())
+                .add(BBBlocks.POROUS_FLESH_SLAB.get())
+                .add(BBBlocks.POROUS_FLESH_WALL.get());
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(BBBlocks.BRIMSTONE_STAIRS.getKey())
-                .add(BBBlocks.BRIMSTONE_SLAB.getKey())
-                .add(BBBlocks.BRIMSTONE_WALL.getKey())
+                .add(BBBlocks.BRIMSTONE_STAIRS.get())
+                .add(BBBlocks.BRIMSTONE_SLAB.get())
+                .add(BBBlocks.BRIMSTONE_WALL.get())
 
-                .add(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.getKey())
-                .add(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.getKey())
-                .add(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.getKey())
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get())
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get())
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get())
         ;
 
-        var stairs = tag(BlockTags.STAIRS);
-        var slabs = tag(BlockTags.SLABS);
-        var walls = tag(BlockTags.WALLS);
-
-        for (var block : BBBlocks.REGISTER.getEntries()) {
-            if (block.value() instanceof StairBlock) {
-                stairs.add(block.getKey());
-            } else if (block.value() instanceof SlabBlock) {
-                slabs.add(block.getKey());
-            } else if (block.value() instanceof WallBlock) {
-                walls.add(block.getKey());
-            }
-        }
-
-        var woodenStairs = tag(BlockTags.WOODEN_STAIRS);
-        var woodenSlabs = tag(BlockTags.WOODEN_SLABS);
-        var woodenWalls = tag(BVTags.Blocks.WOODEN_WALLS);
-        var woodenFences = tag(BlockTags.WOODEN_FENCES);
-        var woodenFenceGates = tag(BlockTags.FENCE_GATES);
-
         for (var block : BBWoodBlocks.REGISTER.getEntries()) {
-            mineableWithAxe.add(block.getKey());
+            mineableWithAxe.add(block.get());
+        }
 
-            if (block.value() instanceof StairBlock) {
-                woodenStairs.add(block.getKey());
-            } else if (block.value() instanceof SlabBlock) {
-                woodenSlabs.add(block.getKey());
-            } else if (block.value() instanceof WallBlock) {
-                woodenWalls.add(block.getKey());
-            } else if (block.value() instanceof FenceBlock) {
-                woodenFences.add(block.getKey());
-            } else if (block.value() instanceof FenceGateBlock) {
-                woodenFenceGates.add(block.getKey());
+        new BBBlockItemTagsProvider() {
+            @Override
+            protected @NotNull TagAppender<Block, Block> tag(@NotNull TagKey<Block> blockTag, @NotNull TagKey<Item> itemTag) {
+                return BBBlockTagsProvider.this.tag(blockTag);
             }
-        }
-
-        walls.addTag(BVTags.Blocks.WOODEN_WALLS);
-    }
-
-    private void addAll(TagKey<Block> tag, DeferredRegister<Block> register) {
-        var appender = tag(tag);
-        for (var block : register.getEntries()) {
-            appender.add(block.getKey());
-        }
+        }.run();
     }
 }

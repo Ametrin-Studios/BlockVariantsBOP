@@ -32,7 +32,8 @@ public final class BlockVariantsBOPIntegration {
         event.createProvider(BBRecipeProvider.Runner::new);
         event.createProvider(BBLanguageProvider::new);
         event.createProvider(BBDataMapProvider::new);
-        event.createBlockAndItemTags(BBBlockTagsProvider::new, BBItemTagsProvider::new);
+        event.createProvider(BBBlockTagsProvider::new);
+        event.createProvider(BBItemTagsProvider::new);
         event.createProvider(CustomLootTableProvider.builder()
                 .addBlockProvider(BBBlockLootProvider::new)
                 ::build);

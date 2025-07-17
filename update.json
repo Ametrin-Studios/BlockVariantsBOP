@@ -1,12 +1,17 @@
 {
   "homepage": "https://curseforge.com/minecraft/mc-mods/block-variants-biomes-o-plenty",
   "promos": {
+    "1.21.8-latest": "1.0.1",
+    "1.21.8-recommended": "1.0.1",
     "1.21.5-latest": "1.0.1",
     "1.21.5-recommended": "1.0.1",
     "1.21.4-latest": "1.0.0",
     "1.21.4-recommended": "1.0.0",
     "1.21.1-latest": "1.0.0",
     "1.21.1-recommended": "1.0.0"
+  },
+  "1.21.8": {
+    "1.0.1": "1.21.8 port"
   },
   "1.21.5": {
     "1.0.1": "fixed wooden tags",
