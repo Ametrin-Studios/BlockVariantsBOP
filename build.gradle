@@ -81,9 +81,9 @@ repositories {
 dependencies {
     implementation "com.ametrinstudios:ametrin:1.21.7-${ametrin_version}"
     implementation "com.ametrinstudios:block_variants:1.21.7-${bv_version}"
-    implementation "curse.maven:biomes-o-plenty-220318:6757628"
-    localRuntime "curse.maven:terrablender-neoforge-940057:6727711"
-    localRuntime "curse.maven:glitchcore-955399:6742885"
+    implementation "curse.maven:biomes-o-plenty-220318:6893106"
+    localRuntime "curse.maven:terrablender-neoforge-940057:6786184"
+    localRuntime "curse.maven:glitchcore-955399:6812823"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
