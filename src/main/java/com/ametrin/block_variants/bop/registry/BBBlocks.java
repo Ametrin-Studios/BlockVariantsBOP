@@ -45,13 +45,9 @@ public final class BBBlocks {
     }
 
     private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> block, BlockBehaviour.Properties properties, Item.Properties itemProperties) {
-        var registryObject = registerWithoutItem(name, block, properties);
+        var registryObject = REGISTER.registerBlock(name, block, properties);
         BBItems.REGISTER.registerItem(name, iproperties -> new BlockItem(registryObject.get(), iproperties), itemProperties);
         return registryObject;
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerWithoutItem(String name, Function<BlockBehaviour.Properties, T> block, BlockBehaviour.Properties properties) {
-        return REGISTER.registerBlock(name, block, properties);
     }
 
     public static Stream<Block> getAllNonWoodBlocks() {
