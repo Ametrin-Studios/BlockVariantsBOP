@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block_variants_bop:block/stripped_origin_oak_log_slab"
+    },
+    "type=double": {
+      "model": "biomesoplenty:block/stripped_origin_oak_log"
+    },
+    "type=top": {
+      "model": "block_variants_bop:block/stripped_origin_oak_log_slab_top"
+    }
+  }
+}

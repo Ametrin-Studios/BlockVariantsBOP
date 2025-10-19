@@ -23,6 +23,11 @@ public final class BBLanguageProvider extends ExtendedLanguageProvider {
 
         family("Rose Quartz").stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL);
 
+        family("Origin Oak Log").stairs(BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS).slab(BBWoodBlocks.ORIGIN_OAK_LOG_SLAB);
+        family("Stripped Origin Oak Log").stairs(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB);
+        family("Origin Oak Wood").stairs(BBWoodBlocks.ORIGIN_OAK_WOOD_STAIRS).slab(BBWoodBlocks.ORIGIN_OAK_WOOD_SLAB).wall(BBWoodBlocks.ORIGIN_OAK_WOOD_WALL).fence(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE).fenceGate(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE_GATE);
+        family("Stripped Origin Oak Wood").stairs(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE_GATE);
+
         family("Fir Log").stairs(BBWoodBlocks.FIR_LOG_STAIRS).slab(BBWoodBlocks.FIR_LOG_SLAB);
         family("Stripped Fir Log").stairs(BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_FIR_LOG_SLAB);
         family("Fir Wood").stairs(BBWoodBlocks.FIR_WOOD_STAIRS).slab(BBWoodBlocks.FIR_WOOD_SLAB).wall(BBWoodBlocks.FIR_WOOD_WALL).fence(BBWoodBlocks.FIR_WOOD_FENCE).fenceGate(BBWoodBlocks.FIR_WOOD_FENCE_GATE);

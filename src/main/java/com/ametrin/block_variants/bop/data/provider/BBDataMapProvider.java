@@ -19,6 +19,14 @@ public final class BBDataMapProvider extends DataMapProvider {
     @Override
     protected void gather(@NotNull HolderLookup.Provider provider) {
         builder(NeoForgeDataMaps.STRIPPABLES)
+                .add(BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS.get()), false)
+                .add(BBWoodBlocks.ORIGIN_OAK_LOG_SLAB, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB.get()), false)
+                .add(BBWoodBlocks.ORIGIN_OAK_WOOD_STAIRS, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_STAIRS.get()), false)
+                .add(BBWoodBlocks.ORIGIN_OAK_WOOD_SLAB, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_SLAB.get()), false)
+                .add(BBWoodBlocks.ORIGIN_OAK_WOOD_WALL, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_WALL.get()), false)
+                .add(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE.get()), false)
+                .add(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE_GATE, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE_GATE.get()), false)
+
                 .add(BBWoodBlocks.FIR_LOG_STAIRS, new Strippable(BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS.get()), false)
                 .add(BBWoodBlocks.FIR_LOG_SLAB, new Strippable(BBWoodBlocks.STRIPPED_FIR_LOG_SLAB.get()), false)
                 .add(BBWoodBlocks.FIR_WOOD_STAIRS, new Strippable(BBWoodBlocks.STRIPPED_FIR_WOOD_STAIRS.get()), false)

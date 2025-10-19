@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "biomesoplenty:block/stripped_origin_oak_log",
+    "side": "biomesoplenty:block/stripped_origin_oak_log",
+    "top": "biomesoplenty:block/stripped_origin_oak_log"
+  }
+}

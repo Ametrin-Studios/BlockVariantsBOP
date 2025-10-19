@@ -1,3 +1,6 @@
+## 1.1.0
+- variants for Origin Oak
+
 ## 1.0.1
 - fixed wooden tags
 

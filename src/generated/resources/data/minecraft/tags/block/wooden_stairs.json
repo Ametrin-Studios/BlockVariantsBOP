@@ -1,5 +1,9 @@
 {
   "values": [
+    "block_variants_bop:origin_oak_log_stairs",
+    "block_variants_bop:stripped_origin_oak_log_stairs",
+    "block_variants_bop:origin_oak_wood_stairs",
+    "block_variants_bop:stripped_origin_oak_wood_stairs",
     "block_variants_bop:fir_log_stairs",
     "block_variants_bop:stripped_fir_log_stairs",
     "block_variants_bop:fir_wood_stairs",

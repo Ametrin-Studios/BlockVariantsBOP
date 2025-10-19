@@ -168,6 +168,27 @@
     "block_variants_bop:maple_wood_wall": {
       "stripped_block": "block_variants_bop:stripped_maple_wood_wall"
     },
+    "block_variants_bop:origin_oak_log_slab": {
+      "stripped_block": "block_variants_bop:stripped_origin_oak_log_slab"
+    },
+    "block_variants_bop:origin_oak_log_stairs": {
+      "stripped_block": "block_variants_bop:stripped_origin_oak_log_stairs"
+    },
+    "block_variants_bop:origin_oak_wood_fence": {
+      "stripped_block": "block_variants_bop:stripped_origin_oak_wood_fence"
+    },
+    "block_variants_bop:origin_oak_wood_fence_gate": {
+      "stripped_block": "block_variants_bop:stripped_origin_oak_wood_fence_gate"
+    },
+    "block_variants_bop:origin_oak_wood_slab": {
+      "stripped_block": "block_variants_bop:stripped_origin_oak_wood_slab"
+    },
+    "block_variants_bop:origin_oak_wood_stairs": {
+      "stripped_block": "block_variants_bop:stripped_origin_oak_wood_stairs"
+    },
+    "block_variants_bop:origin_oak_wood_wall": {
+      "stripped_block": "block_variants_bop:stripped_origin_oak_wood_wall"
+    },
     "block_variants_bop:palm_log_slab": {
       "stripped_block": "block_variants_bop:stripped_palm_log_slab"
     },

@@ -1,6 +1,8 @@
 {
   "homepage": "https://curseforge.com/minecraft/mc-mods/block-variants-biomes-o-plenty",
   "promos": {
+    "1.21.10-latest": "1.1.0",
+    "1.21.10-recommended": "1.1.0",
     "1.21.8-latest": "1.0.1",
     "1.21.8-recommended": "1.0.1",
     "1.21.5-latest": "1.0.1",
@@ -9,6 +11,9 @@
     "1.21.4-recommended": "1.0.0",
     "1.21.1-latest": "1.0.0",
     "1.21.1-recommended": "1.0.0"
+  },
+  "1.21.10": {
+    "1.1.0": "origin oak variants, 1.21.10 port"
   },
   "1.21.8": {
     "1.0.1": "1.21.8 port"

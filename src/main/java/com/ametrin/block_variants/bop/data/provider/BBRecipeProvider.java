@@ -28,6 +28,12 @@ public final class BBRecipeProvider extends ExtendedRecipeProvider {
         stairSlabWall(BBBlocks.BRIMSTONE_STAIRS.get(), BBBlocks.BRIMSTONE_SLAB.get(), BBBlocks.BRIMSTONE_WALL.get(), BOPBlocks.BRIMSTONE, true);
         stairSlabWall(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get(), BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get(), BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get(), BOPBlocks.ROSE_QUARTZ_BLOCK, true);
 
+        // ORIGIN OAK
+        stairSlab(BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS.get(), BBWoodBlocks.ORIGIN_OAK_LOG_SLAB.get(), BOPBlocks.ORIGIN_OAK_LOG, false);
+        stairSlab(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB.get(), BOPBlocks.STRIPPED_ORIGIN_OAK_LOG, false);
+        recipeWoods(BBWoodBlocks.ORIGIN_OAK_WOOD_STAIRS.get(), BBWoodBlocks.ORIGIN_OAK_WOOD_SLAB.get(), BBWoodBlocks.ORIGIN_OAK_WOOD_WALL.get(), BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE.get(), BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE_GATE.get(), BOPBlocks.ORIGIN_OAK_WOOD, BOPBlocks.ORIGIN_OAK_LOG);
+        recipeWoods(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_STAIRS.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_SLAB.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_WALL.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE_GATE.get(), BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD, BOPBlocks.STRIPPED_ORIGIN_OAK_LOG);
+
         // FIR
         stairSlab(BBWoodBlocks.FIR_LOG_STAIRS.get(), BBWoodBlocks.FIR_LOG_SLAB.get(), BOPBlocks.FIR_LOG, false);
         stairSlab(BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS.get(), BBWoodBlocks.STRIPPED_FIR_LOG_SLAB.get(), BOPBlocks.STRIPPED_FIR_LOG, false);

@@ -28,6 +28,12 @@ public final class BBModelProvider extends ExtendedModelProvider {
         blockModels.familyWithExistingFullBlock(BOPBlocks.BRIMSTONE).stairs(BBBlocks.BRIMSTONE_STAIRS.get()).slab(BBBlocks.BRIMSTONE_SLAB.get()).wall(BBBlocks.BRIMSTONE_WALL.get());
         blockModels.familyWithExistingFullBlock(BOPBlocks.ROSE_QUARTZ_BLOCK).stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get()).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get()).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get());
 
+        // ORIGIN OAK
+        logStairsSlab(blockModels, BOPBlocks.ORIGIN_OAK_LOG, BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS.get(), BBWoodBlocks.ORIGIN_OAK_LOG_SLAB.get());
+        logStairsSlab(blockModels, BOPBlocks.STRIPPED_ORIGIN_OAK_LOG, BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB.get());
+        woodStairsSlabWallFenceGate(blockModels, BOPBlocks.ORIGIN_OAK_LOG, BBWoodBlocks.ORIGIN_OAK_WOOD_STAIRS.get(), BBWoodBlocks.ORIGIN_OAK_WOOD_SLAB.get(), BOPBlocks.ORIGIN_OAK_WOOD, BBWoodBlocks.ORIGIN_OAK_WOOD_WALL.get(), BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE.get(), BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE_GATE.get());
+        woodStairsSlabWallFenceGate(blockModels, BOPBlocks.STRIPPED_ORIGIN_OAK_LOG, BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_STAIRS.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_SLAB.get(), BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD, BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_WALL.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE_GATE.get());
+
         // FIR
         logStairsSlab(blockModels, BOPBlocks.FIR_LOG, BBWoodBlocks.FIR_LOG_STAIRS.get(), BBWoodBlocks.FIR_LOG_SLAB.get());
         logStairsSlab(blockModels, BOPBlocks.STRIPPED_FIR_LOG, BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS.get(), BBWoodBlocks.STRIPPED_FIR_LOG_SLAB.get());
