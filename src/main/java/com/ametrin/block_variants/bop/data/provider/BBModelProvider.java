@@ -11,7 +11,6 @@ import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
-import org.jetbrains.annotations.NotNull;
 
 import static com.barion.block_variants.data.provider.BVModelProvider.customSlab;
 import static com.barion.block_variants.data.provider.BVModelProvider.customStairs;
@@ -22,7 +21,7 @@ public final class BBModelProvider extends ExtendedModelProvider {
     }
 
     @Override
-    protected void registerModels(@NotNull BlockModelGenerators blockModels, @NotNull ItemModelGenerators itemModels) {
+    protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         blockModels.familyWithExistingFullBlock(BOPBlocks.FLESH).stairs(BBBlocks.FLESH_STAIRS.get()).slab(BBBlocks.FLESH_SLAB.get()).wall(BBBlocks.FLESH_WALL.get());
         blockModels.familyWithExistingFullBlock(BOPBlocks.POROUS_FLESH).stairs(BBBlocks.POROUS_FLESH_STAIRS.get()).slab(BBBlocks.POROUS_FLESH_SLAB.get()).wall(BBBlocks.POROUS_FLESH_WALL.get());
         blockModels.familyWithExistingFullBlock(BOPBlocks.BRIMSTONE).stairs(BBBlocks.BRIMSTONE_STAIRS.get()).slab(BBBlocks.BRIMSTONE_SLAB.get()).wall(BBBlocks.BRIMSTONE_WALL.get());

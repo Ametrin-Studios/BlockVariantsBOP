@@ -4,7 +4,6 @@ import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrinstudios.ametrin.data.provider.loot_table.ExtendedBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.NotNull;
 
 
 public final class BBBlockLootProvider extends ExtendedBlockLootSubProvider {
@@ -18,7 +17,7 @@ public final class BBBlockLootProvider extends ExtendedBlockLootSubProvider {
     }
 
     @Override
-    protected @NotNull Iterable<Block> getKnownBlocks() {
+    protected Iterable<Block> getKnownBlocks() {
         return BBBlocks.getAllBlocks().toList();
     }
 }

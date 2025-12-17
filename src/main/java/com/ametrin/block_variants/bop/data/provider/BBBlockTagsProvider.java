@@ -11,7 +11,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,7 +20,7 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
     }
 
     @Override
-    protected void addTags(@NotNull HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.Provider provider) {
         var mineableWithAxe = tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(BBBlocks.FLESH_STAIRS.get())
                 .add(BBBlocks.FLESH_SLAB.get())
@@ -44,9 +43,15 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
             mineableWithAxe.add(block.get());
         }
 
+        tag(BlockTags.CRYSTAL_SOUND_BLOCKS)
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get())
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get())
+                .add(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get())
+        ;
+
         new BBBlockItemTagsProvider() {
             @Override
-            protected @NotNull TagAppender<Block, Block> tag(@NotNull TagKey<Block> blockTag, @NotNull TagKey<Item> itemTag) {
+            protected TagAppender<Block, Block> tag(TagKey<Block> blockTag, TagKey<Item> itemTag) {
                 return BBBlockTagsProvider.this.tag(blockTag);
             }
         }.run();

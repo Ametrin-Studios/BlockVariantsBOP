@@ -8,16 +8,15 @@ import com.ametrinstudios.ametrin.data.provider.ExtendedRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public final class BBRecipeProvider extends ExtendedRecipeProvider {
-    public BBRecipeProvider( HolderLookup.Provider registries, RecipeOutput output, Set<ResourceLocation> recipeSet) {
+    public BBRecipeProvider(HolderLookup.Provider registries, RecipeOutput output, Set<Identifier> recipeSet) {
         super(BlockVariantsBOPIntegration.MOD_ID, registries, output, recipeSet);
     }
 
@@ -141,12 +140,12 @@ public final class BBRecipeProvider extends ExtendedRecipeProvider {
         }
 
         @Override
-        protected ExtendedRecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput, Set<ResourceLocation> set) {
+        protected ExtendedRecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput, Set<Identifier> set) {
             return new BBRecipeProvider(provider, recipeOutput, set);
         }
 
         @Override
-        public @NotNull String getName() {
+        public String getName() {
             return "Block Variants - Biomes O' Plenty recipes";
         }
     }

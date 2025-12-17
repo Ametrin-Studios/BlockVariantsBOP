@@ -1,3 +1,7 @@
+## 1.2.0
+- tag fixes
+- 1.21.11 port
+
 ## 1.1.0
 - variants for Origin Oak
 

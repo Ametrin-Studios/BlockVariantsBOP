@@ -8,7 +8,6 @@ import net.minecraft.data.tags.TagAppender;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,10 +18,10 @@ public final class BBItemTagsProvider extends ExtendedItemTagsProvider {
     }
 
     @Override
-    protected void addTags(@NotNull HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.Provider provider) {
         new BBBlockItemTagsProvider() {
             @Override
-            protected @NotNull TagAppender<Block, Block> tag(@NotNull TagKey<Block> blockTag, @NotNull TagKey<Item> itemTag) {
+            protected TagAppender<Block, Block> tag(TagKey<Block> blockTag, TagKey<Item> itemTag) {
                 return new BlockToItemConverter(BBItemTagsProvider.this.tag(itemTag));
             }
         }.run();

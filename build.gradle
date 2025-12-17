@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.115'
+    id 'net.neoforged.moddev' version '2.0.125'
     id 'idea'
 }
 
@@ -81,9 +81,9 @@ repositories {
 dependencies {
     implementation "com.ametrinstudios:ametrin:${minecraft_version}-${ametrin_version}"
     implementation "com.ametrinstudios:block_variants:${minecraft_version}-${bv_version}"
-    implementation "curse.maven:biomes-o-plenty-220318:7098694"
-    localRuntime "curse.maven:terrablender-neoforge-940057:7098524"
-    localRuntime "curse.maven:glitchcore-955399:7123332"
+    implementation "curse.maven:biomes-o-plenty-220318:7339276"
+    localRuntime "curse.maven:terrablender-neoforge-940057:7326873"
+    localRuntime "curse.maven:glitchcore-955399:7335721"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

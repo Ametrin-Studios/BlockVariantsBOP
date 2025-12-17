@@ -6,7 +6,6 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 import net.neoforged.neoforge.registries.datamaps.builtin.Strippable;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -17,7 +16,7 @@ public final class BBDataMapProvider extends DataMapProvider {
     }
 
     @Override
-    protected void gather(@NotNull HolderLookup.Provider provider) {
+    protected void gather(HolderLookup.Provider provider) {
         builder(NeoForgeDataMaps.STRIPPABLES)
                 .add(BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS.get()), false)
                 .add(BBWoodBlocks.ORIGIN_OAK_LOG_SLAB, new Strippable(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB.get()), false)
