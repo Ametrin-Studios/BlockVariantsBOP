@@ -27,6 +27,24 @@ public final class BBModelProvider extends ExtendedModelProvider {
         blockModels.familyWithExistingFullBlock(BOPBlocks.BRIMSTONE).stairs(BBBlocks.BRIMSTONE_STAIRS.get()).slab(BBBlocks.BRIMSTONE_SLAB.get()).wall(BBBlocks.BRIMSTONE_WALL.get());
         blockModels.familyWithExistingFullBlock(BOPBlocks.ROSE_QUARTZ_BLOCK).stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get()).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get()).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get());
 
+        // FLOWER PETALS
+        blockModels.familyWithExistingFullBlock(BOPBlocks.WHITE_FLOWER_PETAL_BLOCK).stairs(BBBlocks.WHITE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.WHITE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.WHITE_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.LIGHT_GRAY_FLOWER_PETAL_BLOCK).stairs(BBBlocks.LIGHT_GRAY_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.LIGHT_GRAY_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.LIGHT_GRAY_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.GRAY_FLOWER_PETAL_BLOCK).stairs(BBBlocks.GRAY_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.GRAY_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.GRAY_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.BLACK_FLOWER_PETAL_BLOCK).stairs(BBBlocks.BLACK_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.BLACK_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.BLACK_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.BROWN_FLOWER_PETAL_BLOCK).stairs(BBBlocks.BROWN_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.BROWN_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.BROWN_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.RED_FLOWER_PETAL_BLOCK).stairs(BBBlocks.RED_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.RED_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.RED_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.ORANGE_FLOWER_PETAL_BLOCK).stairs(BBBlocks.ORANGE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.ORANGE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.ORANGE_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.YELLOW_FLOWER_PETAL_BLOCK).stairs(BBBlocks.YELLOW_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.YELLOW_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.YELLOW_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.LIME_FLOWER_PETAL_BLOCK).stairs(BBBlocks.LIME_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.LIME_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.LIME_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.GREEN_FLOWER_PETAL_BLOCK).stairs(BBBlocks.GREEN_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.GREEN_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.GREEN_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.CYAN_FLOWER_PETAL_BLOCK).stairs(BBBlocks.CYAN_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.CYAN_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.CYAN_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.LIGHT_BLUE_FLOWER_PETAL_BLOCK).stairs(BBBlocks.LIGHT_BLUE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.LIGHT_BLUE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.LIGHT_BLUE_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.BLUE_FLOWER_PETAL_BLOCK).stairs(BBBlocks.BLUE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.BLUE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.BLUE_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.PURPLE_FLOWER_PETAL_BLOCK).stairs(BBBlocks.PURPLE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.PURPLE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.PURPLE_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.MAGENTA_FLOWER_PETAL_BLOCK).stairs(BBBlocks.MAGENTA_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.MAGENTA_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.MAGENTA_FLOWER_PETAL_WALL.get());
+        blockModels.familyWithExistingFullBlock(BOPBlocks.PINK_FLOWER_PETAL_BLOCK).stairs(BBBlocks.PINK_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.PINK_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.PINK_FLOWER_PETAL_WALL.get());
+
         // ORIGIN OAK
         logStairsSlab(blockModels, BOPBlocks.ORIGIN_OAK_LOG, BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS.get(), BBWoodBlocks.ORIGIN_OAK_LOG_SLAB.get());
         logStairsSlab(blockModels, BOPBlocks.STRIPPED_ORIGIN_OAK_LOG, BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS.get(), BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB.get());

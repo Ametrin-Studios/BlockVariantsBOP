@@ -39,6 +39,57 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
                 .add(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get())
         ;
 
+        tag(BlockTags.MINEABLE_WITH_HOE).add(
+                BBBlocks.WHITE_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.WHITE_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.WHITE_FLOWER_PETAL_WALL.get(),
+                BBBlocks.LIGHT_GRAY_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.LIGHT_GRAY_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.LIGHT_GRAY_FLOWER_PETAL_WALL.get(),
+                BBBlocks.GRAY_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.GRAY_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.GRAY_FLOWER_PETAL_WALL.get(),
+                BBBlocks.BLACK_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.BLACK_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.BLACK_FLOWER_PETAL_WALL.get(),
+                BBBlocks.BROWN_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.BROWN_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.BROWN_FLOWER_PETAL_WALL.get(),
+                BBBlocks.RED_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.RED_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.RED_FLOWER_PETAL_WALL.get(),
+                BBBlocks.ORANGE_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.ORANGE_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.ORANGE_FLOWER_PETAL_WALL.get(),
+                BBBlocks.YELLOW_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.YELLOW_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.YELLOW_FLOWER_PETAL_WALL.get(),
+                BBBlocks.LIME_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.LIME_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.LIME_FLOWER_PETAL_WALL.get(),
+                BBBlocks.GREEN_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.GREEN_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.GREEN_FLOWER_PETAL_WALL.get(),
+                BBBlocks.CYAN_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.CYAN_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.CYAN_FLOWER_PETAL_WALL.get(),
+                BBBlocks.LIGHT_BLUE_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.LIGHT_BLUE_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.LIGHT_BLUE_FLOWER_PETAL_WALL.get(),
+                BBBlocks.BLUE_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.BLUE_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.BLUE_FLOWER_PETAL_WALL.get(),
+                BBBlocks.PURPLE_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.PURPLE_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.PURPLE_FLOWER_PETAL_WALL.get(),
+                BBBlocks.MAGENTA_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.MAGENTA_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.MAGENTA_FLOWER_PETAL_WALL.get(),
+                BBBlocks.PINK_FLOWER_PETAL_STAIRS.get(),
+                BBBlocks.PINK_FLOWER_PETAL_SLAB.get(),
+                BBBlocks.PINK_FLOWER_PETAL_WALL.get()
+        );
+
         for (var block : BBWoodBlocks.REGISTER.getEntries()) {
             mineableWithAxe.add(block.get());
         }

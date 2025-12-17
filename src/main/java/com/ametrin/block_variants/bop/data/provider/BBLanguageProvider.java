@@ -23,6 +23,24 @@ public final class BBLanguageProvider extends ExtendedLanguageProvider {
 
         family("Rose Quartz").stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL);
 
+        family("White Flower Petal").stairs(BBBlocks.WHITE_FLOWER_PETAL_STAIRS).slab(BBBlocks.WHITE_FLOWER_PETAL_SLAB).wall(BBBlocks.WHITE_FLOWER_PETAL_WALL);
+        family("Light Gray Flower Petal").stairs(BBBlocks.LIGHT_GRAY_FLOWER_PETAL_STAIRS).slab(BBBlocks.LIGHT_GRAY_FLOWER_PETAL_SLAB).wall(BBBlocks.LIGHT_GRAY_FLOWER_PETAL_WALL);
+        family("Gray Flower Petal").stairs(BBBlocks.GRAY_FLOWER_PETAL_STAIRS).slab(BBBlocks.GRAY_FLOWER_PETAL_SLAB).wall(BBBlocks.GRAY_FLOWER_PETAL_WALL);
+        family("Black Flower Petal").stairs(BBBlocks.BLACK_FLOWER_PETAL_STAIRS).slab(BBBlocks.BLACK_FLOWER_PETAL_SLAB).wall(BBBlocks.BLACK_FLOWER_PETAL_WALL);
+        family("Brown Flower Petal").stairs(BBBlocks.BROWN_FLOWER_PETAL_STAIRS).slab(BBBlocks.BROWN_FLOWER_PETAL_SLAB).wall(BBBlocks.BROWN_FLOWER_PETAL_WALL);
+        family("Red Flower Petal").stairs(BBBlocks.RED_FLOWER_PETAL_STAIRS).slab(BBBlocks.RED_FLOWER_PETAL_SLAB).wall(BBBlocks.RED_FLOWER_PETAL_WALL);
+        family("Orange Flower Petal").stairs(BBBlocks.ORANGE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.ORANGE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.ORANGE_FLOWER_PETAL_WALL.get());
+        family("Yellow Flower Petal").stairs(BBBlocks.YELLOW_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.YELLOW_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.YELLOW_FLOWER_PETAL_WALL.get());
+        family("Lime Flower Petal").stairs(BBBlocks.LIME_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.LIME_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.LIME_FLOWER_PETAL_WALL.get());
+        family("Green Flower Petal").stairs(BBBlocks.GREEN_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.GREEN_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.GREEN_FLOWER_PETAL_WALL.get());
+        family("Cyan Flower Petal").stairs(BBBlocks.CYAN_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.CYAN_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.CYAN_FLOWER_PETAL_WALL.get());
+        family("Light Blue Flower Petal").stairs(BBBlocks.LIGHT_BLUE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.LIGHT_BLUE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.LIGHT_BLUE_FLOWER_PETAL_WALL.get());
+        family("Blue Flower Petal").stairs(BBBlocks.BLUE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.BLUE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.BLUE_FLOWER_PETAL_WALL.get());
+        family("Purple Flower Petal").stairs(BBBlocks.PURPLE_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.PURPLE_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.PURPLE_FLOWER_PETAL_WALL.get());
+        family("Magenta Flower Petal").stairs(BBBlocks.MAGENTA_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.MAGENTA_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.MAGENTA_FLOWER_PETAL_WALL.get());
+        family("Pink Flower Petal").stairs(BBBlocks.PINK_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.PINK_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.PINK_FLOWER_PETAL_WALL.get());
+
+
         family("Origin Oak Log").stairs(BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS).slab(BBWoodBlocks.ORIGIN_OAK_LOG_SLAB);
         family("Stripped Origin Oak Log").stairs(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB);
         family("Origin Oak Wood").stairs(BBWoodBlocks.ORIGIN_OAK_WOOD_STAIRS).slab(BBWoodBlocks.ORIGIN_OAK_WOOD_SLAB).wall(BBWoodBlocks.ORIGIN_OAK_WOOD_WALL).fence(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE).fenceGate(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE_GATE);

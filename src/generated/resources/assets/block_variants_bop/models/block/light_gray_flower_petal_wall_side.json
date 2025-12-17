@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "biomesoplenty:block/light_gray_flower_petal_block"
+  }
+}

@@ -1,4 +1,5 @@
 ## 1.2.0
+- flower petal variants
 - tag fixes
 - 1.21.11 port
 

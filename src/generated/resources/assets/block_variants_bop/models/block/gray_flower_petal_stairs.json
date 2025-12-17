@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "biomesoplenty:block/gray_flower_petal_block",
+    "side": "biomesoplenty:block/gray_flower_petal_block",
+    "top": "biomesoplenty:block/gray_flower_petal_block"
+  }
+}
