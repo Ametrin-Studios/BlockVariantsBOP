@@ -80,7 +80,5 @@ public abstract class BBBlockItemTagsProvider extends ExtendedBlockItemTagsProvi
                 woodenFenceGates.add(block.get());
             }
         }
-
-        walls.addTag(BVTags.Blocks.WOODEN_WALLS);
     }
 }

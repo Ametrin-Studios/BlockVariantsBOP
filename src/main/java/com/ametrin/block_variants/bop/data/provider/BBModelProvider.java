@@ -7,13 +7,10 @@ import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.ExtendedModelProvider;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.*;
 
-import static com.barion.block_variants.data.provider.BVModelProvider.customSlab;
-import static com.barion.block_variants.data.provider.BVModelProvider.customStairs;
+import static com.barion.block_variants.data.provider.BVModelProvider.logStairsSlab;
+import static com.barion.block_variants.data.provider.BVModelProvider.woodStairsSlabWallFenceGate;
 
 public final class BBModelProvider extends ExtendedModelProvider {
     public BBModelProvider(PackOutput output) {
@@ -129,27 +126,5 @@ public final class BBModelProvider extends ExtendedModelProvider {
         woodStairsSlabWallFenceGate(blockModels, BOPBlocks.EMPYREAL_LOG, BBWoodBlocks.EMPYREAL_WOOD_STAIRS.get(), BBWoodBlocks.EMPYREAL_WOOD_SLAB.get(), BOPBlocks.EMPYREAL_WOOD, BBWoodBlocks.EMPYREAL_WOOD_WALL.get(), BBWoodBlocks.EMPYREAL_WOOD_FENCE.get(), BBWoodBlocks.EMPYREAL_WOOD_FENCE_GATE.get());
         woodStairsSlabWallFenceGate(blockModels, BOPBlocks.STRIPPED_EMPYREAL_LOG, BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_STAIRS.get(), BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_SLAB.get(), BOPBlocks.STRIPPED_EMPYREAL_WOOD, BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_WALL.get(), BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_FENCE.get(), BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_FENCE_GATE.get());
 
-    }
-
-    public static void woodStairsSlabWallFenceGate(BlockModelGenerators blockModels, Block base, StairBlock stair, SlabBlock slab, Block doubleSlap, WallBlock wall, FenceBlock fence, FenceGateBlock gate) {
-        blockModels.familyWithExistingFullBlock(base).stairs(stair).wall(wall).fence(fence).fenceGate(gate);
-        customSlab(blockModels, slab, doubleSlap, new TextureMapping()
-                .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(base))
-                .put(TextureSlot.TOP, TextureMapping.getBlockTexture(base))
-                .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(base))
-        );
-    }
-
-    public static void logStairsSlab(BlockModelGenerators blockModels, Block base, StairBlock stair, SlabBlock slab) {
-        var mapping = logTextureMapping(base);
-        customStairs(blockModels, stair, mapping);
-        customSlab(blockModels, slab, base, mapping);
-    }
-
-    public static TextureMapping logTextureMapping(Block log) {
-        return new TextureMapping()
-                .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(log))
-                .put(TextureSlot.TOP, TextureMapping.getBlockTexture(log, "_top"))
-                .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(log, "_top"));
     }
 }
