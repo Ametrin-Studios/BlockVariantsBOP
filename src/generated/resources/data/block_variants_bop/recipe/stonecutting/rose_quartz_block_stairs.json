@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "biomesoplenty:rose_quartz_block",
   "result": {
-    "count": 1,
     "id": "block_variants_bop:rose_quartz_block_stairs"
   }
 }

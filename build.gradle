@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.125'
+    id 'net.neoforged.moddev' version '2.0.141'
     id 'idea'
 }
 
@@ -12,15 +12,10 @@ base {
     archivesName = "$mod_id-$minecraft_version"
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 neoForge {
     version = project.neo_version
-
-    parchment {
-        mappingsVersion = project.parchment_mappings_version
-        minecraftVersion = project.parchment_minecraft_version
-    }
 
     runs {
         client {
@@ -79,11 +74,11 @@ repositories {
 }
 
 dependencies {
-    implementation "com.ametrinstudios:ametrin:${minecraft_version}-${ametrin_version}"
-    implementation "com.ametrinstudios:block_variants:${minecraft_version}-${bv_version}"
-    implementation "curse.maven:biomes-o-plenty-220318:7339276"
-    localRuntime "curse.maven:terrablender-neoforge-940057:7326873"
-    localRuntime "curse.maven:glitchcore-955399:7335721"
+    implementation "com.ametrinstudios:ametrin:26.1.1-${ametrin_version}"
+    implementation "com.ametrinstudios:block_variants:26.1.1-${bv_version}"
+    implementation "curse.maven:biomes-o-plenty-220318:8239932"
+    localRuntime "curse.maven:terrablender-neoforge-940057:8046313"
+    localRuntime "curse.maven:glitchcore-955399:8109770"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
@@ -91,7 +86,6 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             minecraft_version      : minecraft_version,
             minecraft_version_range: minecraft_version_range,
             neo_version            : neo_version,
-            neo_version_range      : neo_version_range,
 
             ametrin_version         : ametrin_version,
             ametrin_version_range   : ametrin_version_range,

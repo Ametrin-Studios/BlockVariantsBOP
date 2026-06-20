@@ -1,6 +1,8 @@
 {
   "homepage": "https://curseforge.com/minecraft/mc-mods/block-variants-biomes-o-plenty",
   "promos": {
+    "26.1.2-latest": "1.2.0",
+    "26.1.2-recommended": "1.2.0",
     "1.21.11-latest": "1.2.0",
     "1.21.11-recommended": "1.2.0",
     "1.21.10-latest": "1.1.0",
@@ -13,6 +15,9 @@
     "1.21.4-recommended": "1.0.0",
     "1.21.1-latest": "1.0.0",
     "1.21.1-recommended": "1.0.0"
+  },
+  "26.1.2": {
+    "1.2.0": "flower petal variants, 26.1.2 port"
   },
   "1.21.11": {
     "1.2.0": "flower petal variants, 1.21.11 port"
