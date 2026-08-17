@@ -4,7 +4,7 @@
       "model": "block_variants_bop:block/brimstone_slab"
     },
     "type=double": {
-      "model": "biomesoplenty:block/brimstone"
+      "model": "biomesoplenty:block/orpiment"
     },
     "type=top": {
       "model": "block_variants_bop:block/brimstone_slab_top"

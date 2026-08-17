@@ -24,7 +24,7 @@ public final class BBRecipeProvider extends ExtendedRecipeProvider {
     protected void buildRecipes() {
         stairSlabWall(BBBlocks.FLESH_STAIRS.get(), BBBlocks.FLESH_SLAB.get(), BBBlocks.FLESH_WALL.get(), BOPBlocks.FLESH, false);
         stairSlabWall(BBBlocks.POROUS_FLESH_STAIRS.get(), BBBlocks.POROUS_FLESH_SLAB.get(), BBBlocks.POROUS_FLESH_WALL.get(), BOPBlocks.POROUS_FLESH, false);
-        stairSlabWall(BBBlocks.BRIMSTONE_STAIRS.get(), BBBlocks.BRIMSTONE_SLAB.get(), BBBlocks.BRIMSTONE_WALL.get(), BOPBlocks.BRIMSTONE, true);
+        stairSlabWall(BBBlocks.BRIMSTONE_STAIRS.get(), BBBlocks.BRIMSTONE_SLAB.get(), BBBlocks.BRIMSTONE_WALL.get(), BOPBlocks.ORPIMENT, true);
         stairSlabWall(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get(), BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get(), BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get(), BOPBlocks.ROSE_QUARTZ_BLOCK, true);
 
         // FLOWER PETALS

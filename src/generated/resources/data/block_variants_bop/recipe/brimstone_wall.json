@@ -1,8 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
-    "#": "biomesoplenty:brimstone"
+    "#": "biomesoplenty:orpiment"
   },
   "pattern": [
     "###",

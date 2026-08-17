@@ -1,6 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": "biomesoplenty:brimstone",
+  "ingredient": "biomesoplenty:orpiment",
   "result": {
     "id": "block_variants_bop:brimstone_stairs"
   }
