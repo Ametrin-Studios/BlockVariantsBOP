@@ -1,5 +1,5 @@
 ## 1.2.1
-- removed Biomes O' Plenty Brimstone variants
+- (26.2) removed Biomes O' Plenty Brimstone variants
 - fix open fence gates breakable by water
 - 26.2 port
 
@@ -10,6 +10,9 @@
 
 ## 1.1.0
 - variants for Origin Oak
+
+## 1.0.2
+- (1.21.1) fix open fence gates breakable by water
 
 ## 1.0.1
 - fixed wooden tags
