@@ -21,7 +21,6 @@ public final class BBModelProvider extends ExtendedModelProvider {
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         blockModels.familyWithExistingFullBlock(BOPBlocks.FLESH).stairs(BBBlocks.FLESH_STAIRS.get()).slab(BBBlocks.FLESH_SLAB.get()).wall(BBBlocks.FLESH_WALL.get());
         blockModels.familyWithExistingFullBlock(BOPBlocks.POROUS_FLESH).stairs(BBBlocks.POROUS_FLESH_STAIRS.get()).slab(BBBlocks.POROUS_FLESH_SLAB.get()).wall(BBBlocks.POROUS_FLESH_WALL.get());
-        blockModels.familyWithExistingFullBlock(BOPBlocks.ORPIMENT).stairs(BBBlocks.BRIMSTONE_STAIRS.get()).slab(BBBlocks.BRIMSTONE_SLAB.get()).wall(BBBlocks.BRIMSTONE_WALL.get());
         blockModels.familyWithExistingFullBlock(BOPBlocks.ROSE_QUARTZ_BLOCK).stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get()).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get()).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get());
 
         // FLOWER PETALS

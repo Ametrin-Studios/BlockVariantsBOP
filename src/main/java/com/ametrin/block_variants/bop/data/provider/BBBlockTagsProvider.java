@@ -27,10 +27,6 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
                 .add(BBBlocks.POROUS_FLESH_WALL.getKey());
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(BBBlocks.BRIMSTONE_STAIRS.getKey())
-                .add(BBBlocks.BRIMSTONE_SLAB.getKey())
-                .add(BBBlocks.BRIMSTONE_WALL.getKey())
-
                 .add(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.getKey())
                 .add(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.getKey())
                 .add(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.getKey())

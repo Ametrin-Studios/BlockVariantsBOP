@@ -32,7 +32,7 @@ public final class BlockVariantsBOPIntegration {
         return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 
-    private static void gatherData(GatherDataEvent.Client event) {
+    private static void gatherData(final GatherDataEvent.Client event) {
         event.createProvider(BBModelProvider::new);
         event.createProvider(BBRecipeProvider.Runner::new);
         event.createProvider(BBLanguageProvider::new);

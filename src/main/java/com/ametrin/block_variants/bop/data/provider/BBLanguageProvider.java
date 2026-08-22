@@ -18,7 +18,6 @@ public final class BBLanguageProvider extends ExtendedLanguageProvider {
 
         family("Flesh").stairs(BBBlocks.FLESH_STAIRS).slab(BBBlocks.FLESH_SLAB).wall(BBBlocks.FLESH_WALL);
         family("Porous Flesh").stairs(BBBlocks.POROUS_FLESH_STAIRS).slab(BBBlocks.POROUS_FLESH_SLAB).wall(BBBlocks.POROUS_FLESH_WALL);
-        family("Brimstone").stairs(BBBlocks.BRIMSTONE_STAIRS).slab(BBBlocks.BRIMSTONE_SLAB).wall(BBBlocks.BRIMSTONE_WALL);
 
         family("Rose Quartz").stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS).slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB).wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL);
 

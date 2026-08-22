@@ -1,16 +1,17 @@
 package com.ametrin.block_variants.bop.registry;
 
 import biomesoplenty.api.block.BOPBlocks;
+import biomesoplenty.core.BiomesOPlenty;
 import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
 import com.ametrin.block_variants.bop.level.block.FleshSlabBlock;
 import com.ametrin.block_variants.bop.level.block.FleshStairBlock;
 import com.ametrin.block_variants.bop.level.block.FleshWallBlock;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -20,13 +21,18 @@ import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
+import static com.ametrin.block_variants.bop.BlockVariantsBOPIntegration.locate;
+
 public final class BBBlocks {
     public static final DeferredRegister.Blocks REGISTER = DeferredRegister.createBlocks(BlockVariantsBOPIntegration.MOD_ID);
 
     private static final SoundType FLESH_SOUND_TYPE = new SoundType(1.0F, 0.5F, SoundEvents.CORAL_BLOCK_BREAK, SoundEvents.CORAL_BLOCK_STEP, SoundEvents.CORAL_BLOCK_PLACE, SoundEvents.CORAL_BLOCK_HIT, SoundEvents.CORAL_BLOCK_FALL);
 
     static {
-        // REGISTER.addAlias();
+        // other mods are not guaranteed to be loaded during RegisterEvent so we have to create the id ourselves
+        BBBlocks.REGISTER.addAlias(locate("brimstone_stairs"), Identifier.fromNamespaceAndPath(BiomesOPlenty.MOD_ID, "orpiment_stairs"));
+        BBBlocks.REGISTER.addAlias(locate("brimstone_slab"), Identifier.fromNamespaceAndPath(BiomesOPlenty.MOD_ID, "orpiment_slab"));
+        BBBlocks.REGISTER.addAlias(locate("brimstone_wall"), Identifier.fromNamespaceAndPath(BiomesOPlenty.MOD_ID, "orpiment_wall"));
     }
 
     public static final DeferredBlock<FleshStairBlock> FLESH_STAIRS = register("flesh_stairs", properties -> new FleshStairBlock(BBBlocks.POROUS_FLESH_STAIRS, BOPBlocks.FLESH.defaultBlockState(), properties), properties -> properties.mapColor(MapColor.TERRACOTTA_RED).strength(0.4F).sound(FLESH_SOUND_TYPE));
@@ -37,9 +43,9 @@ public final class BBBlocks {
     public static final DeferredBlock<SlabBlock> POROUS_FLESH_SLAB = register("porous_flesh_slab", SlabBlock::new, properties -> properties.mapColor(MapColor.TERRACOTTA_RED).strength(0.4F).sound(FLESH_SOUND_TYPE));
     public static final DeferredBlock<WallBlock> POROUS_FLESH_WALL = register("porous_flesh_wall", WallBlock::new, properties -> properties.mapColor(MapColor.TERRACOTTA_RED).strength(0.4F).sound(FLESH_SOUND_TYPE));
 
-    public static final DeferredBlock<StairBlock> BRIMSTONE_STAIRS = register("brimstone_stairs", properties -> new StairBlock(BOPBlocks.ORPIMENT.defaultBlockState(), properties), properties -> properties.instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(0.5F));
-    public static final DeferredBlock<SlabBlock> BRIMSTONE_SLAB = register("brimstone_slab", SlabBlock::new, properties -> properties.instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(0.5F));
-    public static final DeferredBlock<WallBlock> BRIMSTONE_WALL = register("brimstone_wall", WallBlock::new, properties -> properties.instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(0.5F));
+//    public static final DeferredBlock<StairBlock> BRIMSTONE_STAIRS = register("brimstone_stairs", properties -> new StairBlock(BOPBlocks.ORPIMENT.defaultBlockState(), properties), properties -> properties.instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(0.5F));
+//    public static final DeferredBlock<SlabBlock> BRIMSTONE_SLAB = register("brimstone_slab", SlabBlock::new, properties -> properties.instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(0.5F));
+//    public static final DeferredBlock<WallBlock> BRIMSTONE_WALL = register("brimstone_wall", WallBlock::new, properties -> properties.instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(0.5F));
 
     public static final DeferredBlock<StairBlock> ROSE_QUARTZ_BLOCK_STAIRS = register("rose_quartz_block_stairs", properties -> new StairBlock(BOPBlocks.ROSE_QUARTZ_BLOCK.defaultBlockState(), properties), properties -> properties.mapColor(MapColor.CRIMSON_STEM).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops().lightLevel((state) -> 10));
     public static final DeferredBlock<SlabBlock> ROSE_QUARTZ_BLOCK_SLAB = register("rose_quartz_block_slab", SlabBlock::new, properties -> properties.mapColor(MapColor.CRIMSON_STEM).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops().lightLevel((state) -> 10));
