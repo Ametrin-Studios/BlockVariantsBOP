@@ -29,12 +29,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> ORIGIN_OAK_WOOD_SLAB = register("origin_oak_wood_slab", properties -> new SlabBlock(properties.mapColor(BOPBlocks.ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.ORIGIN_OAK_WOOD));
     public static final DeferredBlock<WallBlock> ORIGIN_OAK_WOOD_WALL = register("origin_oak_wood_wall", properties -> new WallBlock(properties.mapColor(BOPBlocks.ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.ORIGIN_OAK_WOOD));
     public static final DeferredBlock<FenceBlock> ORIGIN_OAK_WOOD_FENCE = register("origin_oak_wood_fence", properties -> new FenceBlock(properties.mapColor(BOPBlocks.ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.ORIGIN_OAK_WOOD));
-    public static final DeferredBlock<FenceGateBlock> ORIGIN_OAK_WOOD_FENCE_GATE = register("origin_oak_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.ORIGIN_OAK, properties.mapColor(BOPBlocks.ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.ORIGIN_OAK_WOOD));
+    public static final DeferredBlock<FenceGateBlock> ORIGIN_OAK_WOOD_FENCE_GATE = register("origin_oak_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.ORIGIN_OAK, properties.mapColor(BOPBlocks.ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.ORIGIN_OAK_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_ORIGIN_OAK_WOOD_STAIRS = register("stripped_origin_oak_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD.defaultBlockState(), properties.mapColor(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_ORIGIN_OAK_WOOD_SLAB = register("stripped_origin_oak_wood_slab", properties -> new SlabBlock(properties.mapColor(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_ORIGIN_OAK_WOOD_WALL = register("stripped_origin_oak_wood_wall", properties -> new WallBlock(properties.mapColor(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_ORIGIN_OAK_WOOD_FENCE = register("stripped_origin_oak_wood_fence", properties -> new FenceBlock(properties.mapColor(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_ORIGIN_OAK_WOOD_FENCE_GATE = register("stripped_origin_oak_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.ORIGIN_OAK, properties.mapColor(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_ORIGIN_OAK_WOOD_FENCE_GATE = register("stripped_origin_oak_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.ORIGIN_OAK, properties.mapColor(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_ORIGIN_OAK_WOOD).forceSolidOn());
 
     // FIR
     public static final DeferredBlock<StairBlock> FIR_LOG_STAIRS = register("fir_log_stairs", properties -> new StairBlock(BOPBlocks.FIR_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.FIR_WOOD));
@@ -45,12 +45,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> FIR_WOOD_SLAB = register("fir_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.FIR_WOOD));
     public static final DeferredBlock<WallBlock> FIR_WOOD_WALL = register("fir_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.FIR_WOOD));
     public static final DeferredBlock<FenceBlock> FIR_WOOD_FENCE = register("fir_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.FIR_WOOD));
-    public static final DeferredBlock<FenceGateBlock> FIR_WOOD_FENCE_GATE = register("fir_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.FIR, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.FIR_WOOD));
+    public static final DeferredBlock<FenceGateBlock> FIR_WOOD_FENCE_GATE = register("fir_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.FIR, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.FIR_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_FIR_WOOD_STAIRS = register("stripped_fir_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_FIR_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_FIR_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_FIR_WOOD_SLAB = register("stripped_fir_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_FIR_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_FIR_WOOD_WALL = register("stripped_fir_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_FIR_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_FIR_WOOD_FENCE = register("stripped_fir_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_FIR_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_FIR_WOOD_FENCE_GATE = register("stripped_fir_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.FIR, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_FIR_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_FIR_WOOD_FENCE_GATE = register("stripped_fir_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.FIR, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_FIR_WOOD).forceSolidOn());
 
     // PINE
     public static final DeferredBlock<StairBlock> PINE_LOG_STAIRS = register("pine_log_stairs", properties -> new StairBlock(BOPBlocks.PINE_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PINE_WOOD));
@@ -61,12 +61,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> PINE_WOOD_SLAB = register("pine_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PINE_WOOD));
     public static final DeferredBlock<WallBlock> PINE_WOOD_WALL = register("pine_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PINE_WOOD));
     public static final DeferredBlock<FenceBlock> PINE_WOOD_FENCE = register("pine_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PINE_WOOD));
-    public static final DeferredBlock<FenceGateBlock> PINE_WOOD_FENCE_GATE = register("pine_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PINE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PINE_WOOD));
+    public static final DeferredBlock<FenceGateBlock> PINE_WOOD_FENCE_GATE = register("pine_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PINE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PINE_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_PINE_WOOD_STAIRS = register("stripped_pine_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_PINE_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PINE_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_PINE_WOOD_SLAB = register("stripped_pine_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PINE_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_PINE_WOOD_WALL = register("stripped_pine_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PINE_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_PINE_WOOD_FENCE = register("stripped_pine_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PINE_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_PINE_WOOD_FENCE_GATE = register("stripped_pine_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PINE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PINE_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_PINE_WOOD_FENCE_GATE = register("stripped_pine_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PINE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PINE_WOOD).forceSolidOn());
 
     // MAPLE
     public static final DeferredBlock<StairBlock> MAPLE_LOG_STAIRS = register("maple_log_stairs", properties -> new StairBlock(BOPBlocks.MAPLE_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAPLE_WOOD));
@@ -77,12 +77,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> MAPLE_WOOD_SLAB = register("maple_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAPLE_WOOD));
     public static final DeferredBlock<WallBlock> MAPLE_WOOD_WALL = register("maple_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAPLE_WOOD));
     public static final DeferredBlock<FenceBlock> MAPLE_WOOD_FENCE = register("maple_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAPLE_WOOD));
-    public static final DeferredBlock<FenceGateBlock> MAPLE_WOOD_FENCE_GATE = register("maple_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAPLE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAPLE_WOOD));
+    public static final DeferredBlock<FenceGateBlock> MAPLE_WOOD_FENCE_GATE = register("maple_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAPLE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAPLE_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_MAPLE_WOOD_STAIRS = register("stripped_maple_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_MAPLE_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAPLE_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_MAPLE_WOOD_SLAB = register("stripped_maple_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAPLE_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_MAPLE_WOOD_WALL = register("stripped_maple_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAPLE_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_MAPLE_WOOD_FENCE = register("stripped_maple_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAPLE_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_MAPLE_WOOD_FENCE_GATE = register("stripped_maple_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAPLE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAPLE_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_MAPLE_WOOD_FENCE_GATE = register("stripped_maple_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAPLE, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAPLE_WOOD).forceSolidOn());
 
     // REDWOOD
     public static final DeferredBlock<StairBlock> REDWOOD_LOG_STAIRS = register("redwood_log_stairs", properties -> new StairBlock(BOPBlocks.REDWOOD_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.REDWOOD_WOOD));
@@ -93,12 +93,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> REDWOOD_WOOD_SLAB = register("redwood_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.REDWOOD_WOOD));
     public static final DeferredBlock<WallBlock> REDWOOD_WOOD_WALL = register("redwood_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.REDWOOD_WOOD));
     public static final DeferredBlock<FenceBlock> REDWOOD_WOOD_FENCE = register("redwood_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.REDWOOD_WOOD));
-    public static final DeferredBlock<FenceGateBlock> REDWOOD_WOOD_FENCE_GATE = register("redwood_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.REDWOOD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.REDWOOD_WOOD));
+    public static final DeferredBlock<FenceGateBlock> REDWOOD_WOOD_FENCE_GATE = register("redwood_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.REDWOOD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.REDWOOD_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_REDWOOD_WOOD_STAIRS = register("stripped_redwood_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_REDWOOD_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_REDWOOD_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_REDWOOD_WOOD_SLAB = register("stripped_redwood_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_REDWOOD_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_REDWOOD_WOOD_WALL = register("stripped_redwood_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_REDWOOD_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_REDWOOD_WOOD_FENCE = register("stripped_redwood_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_REDWOOD_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_REDWOOD_WOOD_FENCE_GATE = register("stripped_redwood_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.REDWOOD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_REDWOOD_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_REDWOOD_WOOD_FENCE_GATE = register("stripped_redwood_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.REDWOOD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_REDWOOD_WOOD).forceSolidOn());
 
     // MAHOGANY
     public static final DeferredBlock<StairBlock> MAHOGANY_LOG_STAIRS = register("mahogany_log_stairs", properties -> new StairBlock(BOPBlocks.MAHOGANY_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAHOGANY_WOOD));
@@ -109,12 +109,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> MAHOGANY_WOOD_SLAB = register("mahogany_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAHOGANY_WOOD));
     public static final DeferredBlock<WallBlock> MAHOGANY_WOOD_WALL = register("mahogany_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAHOGANY_WOOD));
     public static final DeferredBlock<FenceBlock> MAHOGANY_WOOD_FENCE = register("mahogany_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAHOGANY_WOOD));
-    public static final DeferredBlock<FenceGateBlock> MAHOGANY_WOOD_FENCE_GATE = register("mahogany_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAHOGANY, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAHOGANY_WOOD));
+    public static final DeferredBlock<FenceGateBlock> MAHOGANY_WOOD_FENCE_GATE = register("mahogany_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAHOGANY, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAHOGANY_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_MAHOGANY_WOOD_STAIRS = register("stripped_mahogany_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_MAHOGANY_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAHOGANY_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_MAHOGANY_WOOD_SLAB = register("stripped_mahogany_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAHOGANY_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_MAHOGANY_WOOD_WALL = register("stripped_mahogany_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAHOGANY_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_MAHOGANY_WOOD_FENCE = register("stripped_mahogany_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAHOGANY_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_MAHOGANY_WOOD_FENCE_GATE = register("stripped_mahogany_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAHOGANY, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAHOGANY_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_MAHOGANY_WOOD_FENCE_GATE = register("stripped_mahogany_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAHOGANY, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAHOGANY_WOOD).forceSolidOn());
 
     // JACARANDA
     public static final DeferredBlock<StairBlock> JACARANDA_LOG_STAIRS = register("jacaranda_log_stairs", properties -> new StairBlock(BOPBlocks.JACARANDA_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.JACARANDA_WOOD));
@@ -125,12 +125,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> JACARANDA_WOOD_SLAB = register("jacaranda_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.JACARANDA_WOOD));
     public static final DeferredBlock<WallBlock> JACARANDA_WOOD_WALL = register("jacaranda_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.JACARANDA_WOOD));
     public static final DeferredBlock<FenceBlock> JACARANDA_WOOD_FENCE = register("jacaranda_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.JACARANDA_WOOD));
-    public static final DeferredBlock<FenceGateBlock> JACARANDA_WOOD_FENCE_GATE = register("jacaranda_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.JACARANDA, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.JACARANDA_WOOD));
+    public static final DeferredBlock<FenceGateBlock> JACARANDA_WOOD_FENCE_GATE = register("jacaranda_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.JACARANDA, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.JACARANDA_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_JACARANDA_WOOD_STAIRS = register("stripped_jacaranda_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_JACARANDA_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_JACARANDA_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_JACARANDA_WOOD_SLAB = register("stripped_jacaranda_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_JACARANDA_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_JACARANDA_WOOD_WALL = register("stripped_jacaranda_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_JACARANDA_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_JACARANDA_WOOD_FENCE = register("stripped_jacaranda_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_JACARANDA_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_JACARANDA_WOOD_FENCE_GATE = register("stripped_jacaranda_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.JACARANDA, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_JACARANDA_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_JACARANDA_WOOD_FENCE_GATE = register("stripped_jacaranda_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.JACARANDA, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_JACARANDA_WOOD).forceSolidOn());
 
     // PALM
     public static final DeferredBlock<StairBlock> PALM_LOG_STAIRS = register("palm_log_stairs", properties -> new StairBlock(BOPBlocks.PALM_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PALM_WOOD));
@@ -141,12 +141,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> PALM_WOOD_SLAB = register("palm_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PALM_WOOD));
     public static final DeferredBlock<WallBlock> PALM_WOOD_WALL = register("palm_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PALM_WOOD));
     public static final DeferredBlock<FenceBlock> PALM_WOOD_FENCE = register("palm_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PALM_WOOD));
-    public static final DeferredBlock<FenceGateBlock> PALM_WOOD_FENCE_GATE = register("palm_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PALM, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PALM_WOOD));
+    public static final DeferredBlock<FenceGateBlock> PALM_WOOD_FENCE_GATE = register("palm_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PALM, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.PALM_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_PALM_WOOD_STAIRS = register("stripped_palm_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_PALM_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PALM_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_PALM_WOOD_SLAB = register("stripped_palm_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PALM_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_PALM_WOOD_WALL = register("stripped_palm_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PALM_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_PALM_WOOD_FENCE = register("stripped_palm_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PALM_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_PALM_WOOD_FENCE_GATE = register("stripped_palm_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PALM, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PALM_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_PALM_WOOD_FENCE_GATE = register("stripped_palm_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.PALM, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_PALM_WOOD).forceSolidOn());
 
     // WILLOW
     public static final DeferredBlock<StairBlock> WILLOW_LOG_STAIRS = register("willow_log_stairs", properties -> new StairBlock(BOPBlocks.WILLOW_LOG.defaultBlockState(), properties.mapColor(BOPBlocks.WILLOW_LOG.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.WILLOW_WOOD));
@@ -157,12 +157,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> WILLOW_WOOD_SLAB = register("willow_wood_slab", properties -> new SlabBlock(properties.mapColor(BOPBlocks.WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.WILLOW_WOOD));
     public static final DeferredBlock<WallBlock> WILLOW_WOOD_WALL = register("willow_wood_wall", properties -> new WallBlock(properties.mapColor(BOPBlocks.WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.WILLOW_WOOD));
     public static final DeferredBlock<FenceBlock> WILLOW_WOOD_FENCE = register("willow_wood_fence", properties -> new FenceBlock(properties.mapColor(BOPBlocks.WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.WILLOW_WOOD));
-    public static final DeferredBlock<FenceGateBlock> WILLOW_WOOD_FENCE_GATE = register("willow_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.WILLOW, properties.mapColor(BOPBlocks.WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.WILLOW_WOOD));
+    public static final DeferredBlock<FenceGateBlock> WILLOW_WOOD_FENCE_GATE = register("willow_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.WILLOW, properties.mapColor(BOPBlocks.WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.WILLOW_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_WILLOW_WOOD_STAIRS = register("stripped_willow_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_WILLOW_WOOD.defaultBlockState(), properties.mapColor(BOPBlocks.STRIPPED_WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_WILLOW_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_WILLOW_WOOD_SLAB = register("stripped_willow_wood_slab", properties -> new SlabBlock(properties.mapColor(BOPBlocks.STRIPPED_WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_WILLOW_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_WILLOW_WOOD_WALL = register("stripped_willow_wood_wall", properties -> new WallBlock(properties.mapColor(BOPBlocks.STRIPPED_WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_WILLOW_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_WILLOW_WOOD_FENCE = register("stripped_willow_wood_fence", properties -> new FenceBlock(properties.mapColor(BOPBlocks.STRIPPED_WILLOW_WOOD.defaultMapColor())), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_WILLOW_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_WILLOW_WOOD_FENCE_GATE = register("stripped_willow_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.WILLOW, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_WILLOW_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_WILLOW_WOOD_FENCE_GATE = register("stripped_willow_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.WILLOW, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_WILLOW_WOOD).forceSolidOn());
 
     // DEAD
     public static final DeferredBlock<StairBlock> DEAD_LOG_STAIRS = register("dead_log_stairs", properties -> new StairBlock(BOPBlocks.DEAD_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.DEAD_WOOD));
@@ -173,12 +173,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> DEAD_WOOD_SLAB = register("dead_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.DEAD_WOOD));
     public static final DeferredBlock<WallBlock> DEAD_WOOD_WALL = register("dead_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.DEAD_WOOD));
     public static final DeferredBlock<FenceBlock> DEAD_WOOD_FENCE = register("dead_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.DEAD_WOOD));
-    public static final DeferredBlock<FenceGateBlock> DEAD_WOOD_FENCE_GATE = register("dead_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.DEAD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.DEAD_WOOD));
+    public static final DeferredBlock<FenceGateBlock> DEAD_WOOD_FENCE_GATE = register("dead_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.DEAD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.DEAD_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_DEAD_WOOD_STAIRS = register("stripped_dead_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_DEAD_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_DEAD_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_DEAD_WOOD_SLAB = register("stripped_dead_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_DEAD_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_DEAD_WOOD_WALL = register("stripped_dead_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_DEAD_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_DEAD_WOOD_FENCE = register("stripped_dead_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_DEAD_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_DEAD_WOOD_FENCE_GATE = register("stripped_dead_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.DEAD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_DEAD_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_DEAD_WOOD_FENCE_GATE = register("stripped_dead_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.DEAD, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_DEAD_WOOD).forceSolidOn());
 
     // MAGIC
     public static final DeferredBlock<StairBlock> MAGIC_LOG_STAIRS = register("magic_log_stairs", properties -> new StairBlock(BOPBlocks.MAGIC_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAGIC_WOOD));
@@ -189,12 +189,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> MAGIC_WOOD_SLAB = register("magic_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAGIC_WOOD));
     public static final DeferredBlock<WallBlock> MAGIC_WOOD_WALL = register("magic_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAGIC_WOOD));
     public static final DeferredBlock<FenceBlock> MAGIC_WOOD_FENCE = register("magic_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAGIC_WOOD));
-    public static final DeferredBlock<FenceGateBlock> MAGIC_WOOD_FENCE_GATE = register("magic_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAGIC, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAGIC_WOOD));
+    public static final DeferredBlock<FenceGateBlock> MAGIC_WOOD_FENCE_GATE = register("magic_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAGIC, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.MAGIC_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_MAGIC_WOOD_STAIRS = register("stripped_magic_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_MAGIC_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAGIC_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_MAGIC_WOOD_SLAB = register("stripped_magic_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAGIC_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_MAGIC_WOOD_WALL = register("stripped_magic_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAGIC_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_MAGIC_WOOD_FENCE = register("stripped_magic_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAGIC_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_MAGIC_WOOD_FENCE_GATE = register("stripped_magic_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAGIC, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAGIC_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_MAGIC_WOOD_FENCE_GATE = register("stripped_magic_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.MAGIC, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_MAGIC_WOOD).forceSolidOn());
 
     // UMBRAN
     public static final DeferredBlock<StairBlock> UMBRAN_LOG_STAIRS = register("umbran_log_stairs", properties -> new StairBlock(BOPBlocks.UMBRAN_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.UMBRAN_WOOD));
@@ -205,12 +205,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> UMBRAN_WOOD_SLAB = register("umbran_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.UMBRAN_WOOD));
     public static final DeferredBlock<WallBlock> UMBRAN_WOOD_WALL = register("umbran_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.UMBRAN_WOOD));
     public static final DeferredBlock<FenceBlock> UMBRAN_WOOD_FENCE = register("umbran_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.UMBRAN_WOOD));
-    public static final DeferredBlock<FenceGateBlock> UMBRAN_WOOD_FENCE_GATE = register("umbran_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.UMBRAN, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.UMBRAN_WOOD));
+    public static final DeferredBlock<FenceGateBlock> UMBRAN_WOOD_FENCE_GATE = register("umbran_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.UMBRAN, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.UMBRAN_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_UMBRAN_WOOD_STAIRS = register("stripped_umbran_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_UMBRAN_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_UMBRAN_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_UMBRAN_WOOD_SLAB = register("stripped_umbran_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_UMBRAN_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_UMBRAN_WOOD_WALL = register("stripped_umbran_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_UMBRAN_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_UMBRAN_WOOD_FENCE = register("stripped_umbran_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_UMBRAN_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_UMBRAN_WOOD_FENCE_GATE = register("stripped_umbran_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.UMBRAN, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_UMBRAN_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_UMBRAN_WOOD_FENCE_GATE = register("stripped_umbran_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.UMBRAN, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_UMBRAN_WOOD).forceSolidOn());
 
     // HELLBARK
     public static final DeferredBlock<StairBlock> HELLBARK_LOG_STAIRS = register("hellbark_log_stairs", properties -> new StairBlock(BOPBlocks.HELLBARK_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.HELLBARK_WOOD));
@@ -221,12 +221,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> HELLBARK_WOOD_SLAB = register("hellbark_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.HELLBARK_WOOD));
     public static final DeferredBlock<WallBlock> HELLBARK_WOOD_WALL = register("hellbark_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.HELLBARK_WOOD));
     public static final DeferredBlock<FenceBlock> HELLBARK_WOOD_FENCE = register("hellbark_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.HELLBARK_WOOD));
-    public static final DeferredBlock<FenceGateBlock> HELLBARK_WOOD_FENCE_GATE = register("hellbark_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.HELLBARK, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.HELLBARK_WOOD));
+    public static final DeferredBlock<FenceGateBlock> HELLBARK_WOOD_FENCE_GATE = register("hellbark_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.HELLBARK, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.HELLBARK_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_HELLBARK_WOOD_STAIRS = register("stripped_hellbark_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_HELLBARK_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_HELLBARK_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_HELLBARK_WOOD_SLAB = register("stripped_hellbark_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_HELLBARK_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_HELLBARK_WOOD_WALL = register("stripped_hellbark_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_HELLBARK_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_HELLBARK_WOOD_FENCE = register("stripped_hellbark_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_HELLBARK_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_HELLBARK_WOOD_FENCE_GATE = register("stripped_hellbark_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.HELLBARK, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_HELLBARK_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_HELLBARK_WOOD_FENCE_GATE = register("stripped_hellbark_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.HELLBARK, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_HELLBARK_WOOD).forceSolidOn());
 
     // EMPYREAL
     public static final DeferredBlock<StairBlock> EMPYREAL_LOG_STAIRS = register("empyreal_log_stairs", properties -> new StairBlock(BOPBlocks.EMPYREAL_LOG.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.EMPYREAL_WOOD));
@@ -237,12 +237,12 @@ public final class BBWoodBlocks {
     public static final DeferredBlock<SlabBlock> EMPYREAL_WOOD_SLAB = register("empyreal_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.EMPYREAL_WOOD));
     public static final DeferredBlock<WallBlock> EMPYREAL_WOOD_WALL = register("empyreal_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.EMPYREAL_WOOD));
     public static final DeferredBlock<FenceBlock> EMPYREAL_WOOD_FENCE = register("empyreal_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.EMPYREAL_WOOD));
-    public static final DeferredBlock<FenceGateBlock> EMPYREAL_WOOD_FENCE_GATE = register("empyreal_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.EMPYREAL, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.EMPYREAL_WOOD));
+    public static final DeferredBlock<FenceGateBlock> EMPYREAL_WOOD_FENCE_GATE = register("empyreal_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.EMPYREAL, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.EMPYREAL_WOOD).forceSolidOn());
     public static final DeferredBlock<StairBlock> STRIPPED_EMPYREAL_WOOD_STAIRS = register("stripped_empyreal_wood_stairs", properties -> new StairBlock(BOPBlocks.STRIPPED_EMPYREAL_WOOD.defaultBlockState(), properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_EMPYREAL_WOOD));
     public static final DeferredBlock<SlabBlock> STRIPPED_EMPYREAL_WOOD_SLAB = register("stripped_empyreal_wood_slab", SlabBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_EMPYREAL_WOOD));
     public static final DeferredBlock<WallBlock> STRIPPED_EMPYREAL_WOOD_WALL = register("stripped_empyreal_wood_wall", WallBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_EMPYREAL_WOOD));
     public static final DeferredBlock<FenceBlock> STRIPPED_EMPYREAL_WOOD_FENCE = register("stripped_empyreal_wood_fence", FenceBlock::new, () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_EMPYREAL_WOOD));
-    public static final DeferredBlock<FenceGateBlock> STRIPPED_EMPYREAL_WOOD_FENCE_GATE = register("stripped_empyreal_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.EMPYREAL, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_EMPYREAL_WOOD));
+    public static final DeferredBlock<FenceGateBlock> STRIPPED_EMPYREAL_WOOD_FENCE_GATE = register("stripped_empyreal_wood_fence_gate", properties -> new FenceGateBlock(BOPWoodTypes.EMPYREAL, properties), () -> BlockBehaviour.Properties.ofFullCopy(BOPBlocks.STRIPPED_EMPYREAL_WOOD).forceSolidOn());
 
     private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> block, Supplier<BlockBehaviour.Properties> properties) {
         return register(name, block, properties, Item.Properties::new);
