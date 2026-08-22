@@ -8,6 +8,7 @@ import com.ametrin.block_variants.bop.registry.BBItems;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.CustomLootTableProvider;
 import com.mojang.logging.LogUtils;
+import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -25,6 +26,10 @@ public final class BlockVariantsBOPIntegration {
         BBItems.REGISTER.register(modBus);
         BBCreativeModeTabs.REGISTER.register(modBus);
         modBus.addListener(BlockVariantsBOPIntegration::gatherData);
+    }
+
+    public static Identifier locate(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 
     private static void gatherData(GatherDataEvent.Client event) {
