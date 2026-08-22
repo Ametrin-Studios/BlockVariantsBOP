@@ -1,3 +1,8 @@
+## 1.2.1
+- removed Biomes O' Plenty Brimstone variants
+- fix open fence gates breakable by water
+- 26.2 port
+
 ## 1.2.0
 - flower petal variants
 - tag fixes
