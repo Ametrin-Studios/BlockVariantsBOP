@@ -1,5 +1,6 @@
 package com.ametrin.block_variants.bop.data.provider;
 
+import biomesoplenty.api.block.BOPWoodTypes;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrin.block_variants.data.provider.BVDataMapProvider;
 import net.minecraft.core.HolderLookup;
@@ -7,11 +8,15 @@ import net.minecraft.core.component.BlockTransformer;
 import net.minecraft.data.PackOutput;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.component.BlockTransformers;
+import net.minecraft.world.level.block.FireBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.registries.datamaps.builtin.BlockTransformAppender;
+import net.neoforged.neoforge.registries.datamaps.builtin.Flammable;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -35,5 +40,10 @@ public final class BBDataMapProvider extends DataMapProvider {
         builder(NeoForgeDataMaps.BLOCK_TRANSFORM_APPENDERS)
                 .add(BlockTransformers.AXE, new BlockTransformAppender(List.of(BlockTransformer.BlockTransformData.builder(strippables.build()).sound(SoundEvents.AXE_STRIP).build())), false);
 
+        var flammableTypes = HashSet.<WoodType>newHashSet(BBWoodBlocks.TYPES.size());
+        flammableTypes.addAll(BBWoodBlocks.TYPES);
+        flammableTypes.remove(BOPWoodTypes.HELLBARK);
+        var flammables = builder(NeoForgeDataMaps.FLAMMABLE);
+        BBWoodBlocks.queryWooden(flammableTypes).forEach(b -> flammables.add(b, new Flammable(FireBlock.IGNITE_HARD, FireBlock.BURN_HARD), false));
     }
 }

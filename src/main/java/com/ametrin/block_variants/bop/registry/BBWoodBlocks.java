@@ -16,6 +16,8 @@ import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntPr
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.List;
+import java.util.Set;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -25,7 +27,22 @@ import java.util.stream.Stream;
 public final class BBWoodBlocks {
     public static final DeferredRegister.Blocks REGISTER = DeferredRegister.createBlocks(BlockVariantsBOPIntegration.MOD_ID);
 
-    // ORIGIN OAK, FIR, PINE, MAPLE, REDWOOD, MAHOGANY, JACARANDA, PALM, WILLOW, DEAD, MAGIC, UMBRAN, HELLBARK, EMPYREAL
+    public static final List<WoodType> TYPES = List.of(
+            BOPWoodTypes.ORIGIN_OAK,
+            BOPWoodTypes.FIR,
+            BOPWoodTypes.PINE,
+            BOPWoodTypes.MAPLE,
+            BOPWoodTypes.REDWOOD,
+            BOPWoodTypes.MAHOGANY,
+            BOPWoodTypes.JACARANDA,
+            BOPWoodTypes.PALM,
+            BOPWoodTypes.WILLOW,
+            BOPWoodTypes.DEAD,
+            BOPWoodTypes.MAGIC,
+            BOPWoodTypes.UMBRAN,
+            BOPWoodTypes.HELLBARK,
+            BOPWoodTypes.EMPYREAL
+    );
 
     public static final WoodTypeCollection<Supplier<Block>> LOGS = new WoodTypeCollection<>(ImmutableMap.<WoodType, Supplier<Block>>builder()
             .put(BOPWoodTypes.ORIGIN_OAK, () -> BOPBlocks.ORIGIN_OAK_LOG)
@@ -126,20 +143,36 @@ public final class BBWoodBlocks {
     });
 
     public static final WoodTypeCollection<DeferredBlock<StairBlock>> STRIPPED_WOOD_STAIRS = STRIPPED_WOODS.map((type, log) -> {
-        return register("stripped_" + type.name().substring(14) + "_wood_stairs", StairBlock::new, log, base -> BlockRegisterHelper.stairProperties(base)/*.mapColor(base.defaultMapColor())*/, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
+        return register("stripped_" + type.name().substring(14) + "_wood_stairs", StairBlock::new, log, BlockRegisterHelper::stairProperties, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
     });
     public static final WoodTypeCollection<DeferredBlock<SlabBlock>> STRIPPED_WOOD_SLAB = STRIPPED_WOODS.map((type, log) -> {
-        return register("stripped_" + type.name().substring(14) + "_wood_slab", HorizontalAxisAlignedSlabBlock::new, log, base -> BlockRegisterHelper.slabProperties(base)/*.mapColor(base.defaultMapColor())*/, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_SLABS));
+        return register("stripped_" + type.name().substring(14) + "_wood_slab", HorizontalAxisAlignedSlabBlock::new, log, BlockRegisterHelper::slabProperties, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_SLABS));
     });
     public static final WoodTypeCollection<DeferredBlock<WallBlock>> STRIPPED_WOOD_WALL = STRIPPED_WOODS.map((type, log) -> {
-        return register("stripped_" + type.name().substring(14) + "_wood_wall", WallBlock::new, log, base -> BlockRegisterHelper.wallProperties(base)/*.mapColor(base.defaultMapColor())*/, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
+        return register("stripped_" + type.name().substring(14) + "_wood_wall", WallBlock::new, log, BlockRegisterHelper::wallProperties, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
     });
     public static final WoodTypeCollection<DeferredBlock<FenceBlock>> STRIPPED_WOOD_FENCE = STRIPPED_WOODS.map((type, log) -> {
-        return register("stripped_" + type.name().substring(14) + "_wood_fence", FenceBlock::new, log, base -> BlockRegisterHelper.fenceProperties(base)/*.mapColor(base.defaultMapColor())*/, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
+        return register("stripped_" + type.name().substring(14) + "_wood_fence", FenceBlock::new, log, BlockRegisterHelper::fenceProperties, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
     });
     public static final WoodTypeCollection<DeferredBlock<FenceGateBlock>> STRIPPED_WOOD_FENCE_GATE = STRIPPED_WOODS.map((type, log) -> {
-        return register("stripped_" + type.name().substring(14) + "_wood_fence_gate", p -> new FenceGateBlock(type, p), log, base -> BlockRegisterHelper.fenceGateProperties(base)/*.mapColor(base.defaultMapColor())*/, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
+        return register("stripped_" + type.name().substring(14) + "_wood_fence_gate", p -> new FenceGateBlock(type, p), log, BlockRegisterHelper::fenceGateProperties, p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
     });
+
+    public static final List<WoodTypeCollection<? extends DeferredBlock<? extends Block>>> ALL = List.of(
+            LOG_STAIRS, LOG_SLAB, STRIPPED_LOG_STAIRS, STRIPPED_LOG_SLAB,
+
+            WOOD_STAIRS, WOOD_SLAB, STRIPPED_WOOD_STAIRS, STRIPPED_WOOD_SLAB,
+            WOOD_WALL, WOOD_FENCE, WOOD_FENCE_GATE, STRIPPED_WOOD_WALL, STRIPPED_WOOD_FENCE, STRIPPED_WOOD_FENCE_GATE
+    );
+
+    public static Stream<DeferredBlock<? extends Block>> queryWooden(Set<WoodType> types) {
+        return ALL.stream().mapMulti((node, yield)
+                -> node.forEach((type, block) -> {
+            if (types.contains(type)) {
+                yield.accept(block);
+            }
+        }));
+    }
 
     private static <T extends Block> DeferredBlock<T> register(String name, BiFunction<BlockState, BlockBehaviour.Properties, T> block, Supplier<Block> base, Function<Block, BlockBehaviour.Properties> properties, UnaryOperator<Item.Properties> itemProperties) {
         return register(name, prop -> block.apply(base.get().defaultBlockState(), prop), () -> properties.apply(base.get()), itemProperties);
@@ -147,10 +180,6 @@ public final class BBWoodBlocks {
 
     private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> block, Supplier<Block> base, Function<Block, BlockBehaviour.Properties> properties, UnaryOperator<Item.Properties> itemProperties) {
         return register(name, block, () -> properties.apply(base.get()), itemProperties);
-    }
-
-    private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> block, Supplier<BlockBehaviour.Properties> properties) {
-        return register(name, block, properties, UnaryOperator.identity());
     }
 
     private static <T extends Block> DeferredBlock<T> register(String name, Function<BlockBehaviour.Properties, T> block, Supplier<BlockBehaviour.Properties> properties, UnaryOperator<Item.Properties> itemProperties) {
