@@ -1,3 +1,8 @@
+## 1.3.0
+- compatibility with Block Variants 7
+- proper flammability
+- 26.3 port
+
 ## 1.2.1
 - (26.2) removed Biomes O' Plenty Brimstone variants
 - fix open fence gates breakable by water
