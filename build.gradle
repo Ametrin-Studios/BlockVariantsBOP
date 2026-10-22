@@ -71,10 +71,6 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-
-    maven {
-        url uri(rootProject.file("../maven"))
-    }
 }
 
 dependencies {

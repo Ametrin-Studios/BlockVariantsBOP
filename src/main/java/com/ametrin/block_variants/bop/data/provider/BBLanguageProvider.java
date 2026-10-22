@@ -16,7 +16,7 @@ public final class BBLanguageProvider extends ExtendedLanguageProvider {
     protected void addTranslations() {
         add(BBCreativeModeTabs.BLOCK_VARIANTS_BOP_TRANSLATION_KEY, "Block Variants - Biomes O' Plenty");
 
-        BBWoodBlocks.REGISTER.getEntries().forEach(e -> addHumanized(e.get(), e.getId().getPath()));
         BBBlocks.REGISTER.getEntries().forEach(e -> addHumanized(e.get(), e.getId().getPath()));
+        BBWoodBlocks.REGISTER.getEntries().forEach(e -> addHumanized(e.get(), e.getId().getPath()));
     }
 }

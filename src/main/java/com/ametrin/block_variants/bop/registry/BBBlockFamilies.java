@@ -1,5 +1,6 @@
 package com.ametrin.block_variants.bop.registry;
 
+import biomesoplenty.api.block.BOPBlocks;
 import com.ametrin.block_variants.registry.BVBlockFamilies;
 import com.ametrinstudios.ametrin.data.DataProviderExtensions;
 import com.ametrinstudios.ametrin.util.WoodTypeCollection;
@@ -7,12 +8,41 @@ import com.google.common.collect.Maps;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.BlockFamily;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ColorCollection;
 
 import java.util.Comparator;
 import java.util.Map;
 
 public final class BBBlockFamilies {
     public static final Map<Block, BlockFamily> MAP = Maps.newTreeMap(Comparator.comparing(DataProviderExtensions::getBlockKey));
+
+    public static final BlockFamily FLESH = familyBuilder(BOPBlocks.FLESH)
+            .stairs(BBBlocks.FLESH_STAIRS.get())
+            .slab(BBBlocks.FLESH_SLAB.get())
+            .wall(BBBlocks.FLESH_WALL.get())
+            .getFamily();
+
+    public static final BlockFamily POROUS_FLESH = familyBuilder(BOPBlocks.POROUS_FLESH)
+            .stairs(BBBlocks.POROUS_FLESH_STAIRS.get())
+            .slab(BBBlocks.POROUS_FLESH_SLAB.get())
+            .wall(BBBlocks.POROUS_FLESH_WALL.get())
+            .getFamily();
+
+    public static final BlockFamily ROSE_QUARTZ_BLOCK = familyBuilder(BOPBlocks.ROSE_QUARTZ_BLOCK)
+            .stairs(BBBlocks.ROSE_QUARTZ_BLOCK_STAIRS.get())
+            .slab(BBBlocks.ROSE_QUARTZ_BLOCK_SLAB.get())
+            .wall(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.get())
+            .generateStonecutterRecipe()
+            .getFamily();
+
+
+    public static final ColorCollection<BlockFamily> FLOWER_PETALS = ColorCollection.zipMap(ColorCollection.VALUES, BBBlocks.FLOWER_PETALS, (color, block) ->
+            familyBuilder(block.get())
+                    .stairs(BBBlocks.FLOWER_PETAL_STAIRS.pick(color).get())
+                    .slab(BBBlocks.FLOWER_PETAL_SLAB.pick(color).get())
+                    .wall(BBBlocks.FLOWER_PETAL_WALL.pick(color).get())
+                    .getFamily()
+            );
 
     public static final WoodTypeCollection<BlockFamily> LOG = BBWoodBlocks.LOGS.map((type, base) ->
             logFamily(familyBuilder(base.get())

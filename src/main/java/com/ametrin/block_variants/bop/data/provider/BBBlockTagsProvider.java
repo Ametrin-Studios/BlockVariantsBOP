@@ -1,12 +1,14 @@
 package com.ametrin.block_variants.bop.data.provider;
 
 import com.ametrin.block_variants.bop.BlockVariantsBOPIntegration;
+import com.ametrin.block_variants.bop.registry.BBBlockItemIds;
 import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
 import com.ametrinstudios.ametrin.data.provider.ExtendedBlockTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BlockItemTagsProvider;
+import net.minecraft.references.BlockItemId;
 import net.minecraft.tags.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -32,56 +34,11 @@ public final class BBBlockTagsProvider extends ExtendedBlockTagsProvider {
                 .add(BBBlocks.ROSE_QUARTZ_BLOCK_WALL.key())
         ;
 
-        tag(BlockTags.MINEABLE_WITH_HOE).add(
-                BBBlocks.WHITE_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.WHITE_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.WHITE_FLOWER_PETAL_WALL.key(),
-                BBBlocks.LIGHT_GRAY_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.LIGHT_GRAY_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.LIGHT_GRAY_FLOWER_PETAL_WALL.key(),
-                BBBlocks.GRAY_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.GRAY_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.GRAY_FLOWER_PETAL_WALL.key(),
-                BBBlocks.BLACK_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.BLACK_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.BLACK_FLOWER_PETAL_WALL.key(),
-                BBBlocks.BROWN_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.BROWN_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.BROWN_FLOWER_PETAL_WALL.key(),
-                BBBlocks.RED_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.RED_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.RED_FLOWER_PETAL_WALL.key(),
-                BBBlocks.ORANGE_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.ORANGE_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.ORANGE_FLOWER_PETAL_WALL.key(),
-                BBBlocks.YELLOW_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.YELLOW_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.YELLOW_FLOWER_PETAL_WALL.key(),
-                BBBlocks.LIME_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.LIME_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.LIME_FLOWER_PETAL_WALL.key(),
-                BBBlocks.GREEN_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.GREEN_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.GREEN_FLOWER_PETAL_WALL.key(),
-                BBBlocks.CYAN_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.CYAN_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.CYAN_FLOWER_PETAL_WALL.key(),
-                BBBlocks.LIGHT_BLUE_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.LIGHT_BLUE_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.LIGHT_BLUE_FLOWER_PETAL_WALL.key(),
-                BBBlocks.BLUE_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.BLUE_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.BLUE_FLOWER_PETAL_WALL.key(),
-                BBBlocks.PURPLE_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.PURPLE_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.PURPLE_FLOWER_PETAL_WALL.key(),
-                BBBlocks.MAGENTA_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.MAGENTA_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.MAGENTA_FLOWER_PETAL_WALL.key(),
-                BBBlocks.PINK_FLOWER_PETAL_STAIRS.key(),
-                BBBlocks.PINK_FLOWER_PETAL_SLAB.key(),
-                BBBlocks.PINK_FLOWER_PETAL_WALL.key()
-        );
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .addAll(BBBlockItemIds.FLOWER_PETAL_STAIRS.asList().stream().map(BlockItemId::block))
+                .addAll(BBBlockItemIds.FLOWER_PETAL_SLAB.asList().stream().map(BlockItemId::block))
+                .addAll(BBBlockItemIds.FLOWER_PETAL_WALL.asList().stream().map(BlockItemId::block))
+        ;
 
         for (var block : BBWoodBlocks.REGISTER.getEntries()) {
             mineableWithAxe.add(block.key());
