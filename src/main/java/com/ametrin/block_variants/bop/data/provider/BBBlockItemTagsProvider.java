@@ -2,8 +2,8 @@ package com.ametrin.block_variants.bop.data.provider;
 
 import com.ametrin.block_variants.bop.registry.BBBlocks;
 import com.ametrin.block_variants.bop.registry.BBWoodBlocks;
+import com.ametrin.block_variants.registry.BVTags;
 import com.ametrinstudios.ametrin.data.provider.ExtendedBlockItemTagsProvider;
-import com.barion.block_variants.registry.BVTags;
 import net.minecraft.references.BlockItemId;
 import net.minecraft.tags.BlockItemTagId;
 import net.minecraft.tags.BlockItemTags;
@@ -25,7 +25,7 @@ public final class BBBlockItemTagsProvider extends ExtendedBlockItemTagsProvider
         var walls = tag(BlockItemTags.WALLS);
 
         for (var block : BBBlocks.REGISTER.getEntries()) {
-            var blockItemId = BlockItemId.create(block.getKey().identifier(), block.getKey().identifier());
+            var blockItemId = BlockItemId.create(block.getId(), block.getId());
             if (block.value() instanceof StairBlock) {
                 stairs.add(blockItemId);
             } else if (block.value() instanceof SlabBlock) {
@@ -34,7 +34,7 @@ public final class BBBlockItemTagsProvider extends ExtendedBlockItemTagsProvider
                 walls.add(blockItemId);
             }
 
-            var name = block.getKey().identifier().getPath();
+            var name = block.getId().getPath();
             if (name.contains("white")) {
                 tag(new BlockItemTagId(Tags.Blocks.DYED_WHITE, Tags.Items.DYED_WHITE)).add(blockItemId);
             } else if (name.contains("light_gray")) {
@@ -77,7 +77,7 @@ public final class BBBlockItemTagsProvider extends ExtendedBlockItemTagsProvider
         var woodenFenceGates = tag(BlockItemTags.FENCE_GATES);
 
         for (var block : BBWoodBlocks.REGISTER.getEntries()) {
-            var blockItemId = BlockItemId.create(block.getKey().identifier(), block.getKey().identifier());
+            var blockItemId = BlockItemId.create(block.getId(), block.getId());
             if (block.value() instanceof StairBlock) {
                 woodenStairs.add(blockItemId);
             } else if (block.value() instanceof SlabBlock) {

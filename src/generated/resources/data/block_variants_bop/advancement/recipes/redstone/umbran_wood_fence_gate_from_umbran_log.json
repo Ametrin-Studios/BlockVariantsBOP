@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "block_variants_bop:umbran_wood_fence_gate_from_umbran_log"
+        "recipes": "block_variants_bop:umbran_wood_fence_gate_from_umbran_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

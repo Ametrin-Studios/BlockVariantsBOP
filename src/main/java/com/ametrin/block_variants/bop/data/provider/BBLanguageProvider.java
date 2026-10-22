@@ -38,76 +38,77 @@ public final class BBLanguageProvider extends ExtendedLanguageProvider {
         family("Magenta Flower Petal").stairs(BBBlocks.MAGENTA_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.MAGENTA_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.MAGENTA_FLOWER_PETAL_WALL.get());
         family("Pink Flower Petal").stairs(BBBlocks.PINK_FLOWER_PETAL_STAIRS.get()).slab(BBBlocks.PINK_FLOWER_PETAL_SLAB.get()).wall(BBBlocks.PINK_FLOWER_PETAL_WALL.get());
 
+        BBWoodBlocks.REGISTER.getEntries().forEach(e -> addHumanized(e.get(), e.getId().getPath()));
 
-        family("Origin Oak Log").stairs(BBWoodBlocks.ORIGIN_OAK_LOG_STAIRS).slab(BBWoodBlocks.ORIGIN_OAK_LOG_SLAB);
-        family("Stripped Origin Oak Log").stairs(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_ORIGIN_OAK_LOG_SLAB);
-        family("Origin Oak Wood").stairs(BBWoodBlocks.ORIGIN_OAK_WOOD_STAIRS).slab(BBWoodBlocks.ORIGIN_OAK_WOOD_SLAB).wall(BBWoodBlocks.ORIGIN_OAK_WOOD_WALL).fence(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE).fenceGate(BBWoodBlocks.ORIGIN_OAK_WOOD_FENCE_GATE);
-        family("Stripped Origin Oak Wood").stairs(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_ORIGIN_OAK_WOOD_FENCE_GATE);
-
-        family("Fir Log").stairs(BBWoodBlocks.FIR_LOG_STAIRS).slab(BBWoodBlocks.FIR_LOG_SLAB);
-        family("Stripped Fir Log").stairs(BBWoodBlocks.STRIPPED_FIR_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_FIR_LOG_SLAB);
-        family("Fir Wood").stairs(BBWoodBlocks.FIR_WOOD_STAIRS).slab(BBWoodBlocks.FIR_WOOD_SLAB).wall(BBWoodBlocks.FIR_WOOD_WALL).fence(BBWoodBlocks.FIR_WOOD_FENCE).fenceGate(BBWoodBlocks.FIR_WOOD_FENCE_GATE);
-        family("Stripped Fir Wood").stairs(BBWoodBlocks.STRIPPED_FIR_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_FIR_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_FIR_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_FIR_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_FIR_WOOD_FENCE_GATE);
-
-        family("Pine Log").stairs(BBWoodBlocks.PINE_LOG_STAIRS).slab(BBWoodBlocks.PINE_LOG_SLAB);
-        family("Stripped Pine Log").stairs(BBWoodBlocks.STRIPPED_PINE_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_PINE_LOG_SLAB);
-        family("Pine Wood").stairs(BBWoodBlocks.PINE_WOOD_STAIRS).slab(BBWoodBlocks.PINE_WOOD_SLAB).wall(BBWoodBlocks.PINE_WOOD_WALL).fence(BBWoodBlocks.PINE_WOOD_FENCE).fenceGate(BBWoodBlocks.PINE_WOOD_FENCE_GATE);
-        family("Stripped Pine Wood").stairs(BBWoodBlocks.STRIPPED_PINE_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_PINE_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_PINE_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_PINE_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_PINE_WOOD_FENCE_GATE);
-
-        family("Maple Log").stairs(BBWoodBlocks.MAPLE_LOG_STAIRS).slab(BBWoodBlocks.MAPLE_LOG_SLAB);
-        family("Stripped Maple Log").stairs(BBWoodBlocks.STRIPPED_MAPLE_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_MAPLE_LOG_SLAB);
-        family("Maple Wood").stairs(BBWoodBlocks.MAPLE_WOOD_STAIRS).slab(BBWoodBlocks.MAPLE_WOOD_SLAB).wall(BBWoodBlocks.MAPLE_WOOD_WALL).fence(BBWoodBlocks.MAPLE_WOOD_FENCE).fenceGate(BBWoodBlocks.MAPLE_WOOD_FENCE_GATE);
-        family("Stripped Maple Wood").stairs(BBWoodBlocks.STRIPPED_MAPLE_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_MAPLE_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_MAPLE_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_MAPLE_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_MAPLE_WOOD_FENCE_GATE);
-
-        family("Redwood Log").stairs(BBWoodBlocks.REDWOOD_LOG_STAIRS).slab(BBWoodBlocks.REDWOOD_LOG_SLAB);
-        family("Stripped Redwood Log").stairs(BBWoodBlocks.STRIPPED_REDWOOD_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_REDWOOD_LOG_SLAB);
-        family("Redwood Wood").stairs(BBWoodBlocks.REDWOOD_WOOD_STAIRS).slab(BBWoodBlocks.REDWOOD_WOOD_SLAB).wall(BBWoodBlocks.REDWOOD_WOOD_WALL).fence(BBWoodBlocks.REDWOOD_WOOD_FENCE).fenceGate(BBWoodBlocks.REDWOOD_WOOD_FENCE_GATE);
-        family("Stripped Redwood Wood").stairs(BBWoodBlocks.STRIPPED_REDWOOD_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_REDWOOD_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_REDWOOD_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_REDWOOD_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_REDWOOD_WOOD_FENCE_GATE);
-
-        family("Mahogany Log").stairs(BBWoodBlocks.MAHOGANY_LOG_STAIRS).slab(BBWoodBlocks.MAHOGANY_LOG_SLAB);
-        family("Stripped Mahogany Log").stairs(BBWoodBlocks.STRIPPED_MAHOGANY_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_MAHOGANY_LOG_SLAB);
-        family("Mahogany Wood").stairs(BBWoodBlocks.MAHOGANY_WOOD_STAIRS).slab(BBWoodBlocks.MAHOGANY_WOOD_SLAB).wall(BBWoodBlocks.MAHOGANY_WOOD_WALL).fence(BBWoodBlocks.MAHOGANY_WOOD_FENCE).fenceGate(BBWoodBlocks.MAHOGANY_WOOD_FENCE_GATE);
-        family("Stripped Mahogany Wood").stairs(BBWoodBlocks.STRIPPED_MAHOGANY_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_MAHOGANY_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_MAHOGANY_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_MAHOGANY_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_MAHOGANY_WOOD_FENCE_GATE);
-
-        family("Jacaranda Log").stairs(BBWoodBlocks.JACARANDA_LOG_STAIRS).slab(BBWoodBlocks.JACARANDA_LOG_SLAB);
-        family("Stripped Jacaranda Log").stairs(BBWoodBlocks.STRIPPED_JACARANDA_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_JACARANDA_LOG_SLAB);
-        family("Jacaranda Wood").stairs(BBWoodBlocks.JACARANDA_WOOD_STAIRS).slab(BBWoodBlocks.JACARANDA_WOOD_SLAB).wall(BBWoodBlocks.JACARANDA_WOOD_WALL).fence(BBWoodBlocks.JACARANDA_WOOD_FENCE).fenceGate(BBWoodBlocks.JACARANDA_WOOD_FENCE_GATE);
-        family("Stripped Jacaranda Wood").stairs(BBWoodBlocks.STRIPPED_JACARANDA_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_JACARANDA_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_JACARANDA_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_JACARANDA_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_JACARANDA_WOOD_FENCE_GATE);
-
-        family("Palm Log").stairs(BBWoodBlocks.PALM_LOG_STAIRS).slab(BBWoodBlocks.PALM_LOG_SLAB);
-        family("Stripped Palm Log").stairs(BBWoodBlocks.STRIPPED_PALM_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_PALM_LOG_SLAB);
-        family("Palm Wood").stairs(BBWoodBlocks.PALM_WOOD_STAIRS).slab(BBWoodBlocks.PALM_WOOD_SLAB).wall(BBWoodBlocks.PALM_WOOD_WALL).fence(BBWoodBlocks.PALM_WOOD_FENCE).fenceGate(BBWoodBlocks.PALM_WOOD_FENCE_GATE);
-        family("Stripped Palm Wood").stairs(BBWoodBlocks.STRIPPED_PALM_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_PALM_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_PALM_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_PALM_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_PALM_WOOD_FENCE_GATE);
-
-        family("Willow Log").stairs(BBWoodBlocks.WILLOW_LOG_STAIRS).slab(BBWoodBlocks.WILLOW_LOG_SLAB);
-        family("Stripped Willow Log").stairs(BBWoodBlocks.STRIPPED_WILLOW_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_WILLOW_LOG_SLAB);
-        family("Willow Wood").stairs(BBWoodBlocks.WILLOW_WOOD_STAIRS).slab(BBWoodBlocks.WILLOW_WOOD_SLAB).wall(BBWoodBlocks.WILLOW_WOOD_WALL).fence(BBWoodBlocks.WILLOW_WOOD_FENCE).fenceGate(BBWoodBlocks.WILLOW_WOOD_FENCE_GATE);
-        family("Stripped Willow Wood").stairs(BBWoodBlocks.STRIPPED_WILLOW_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_WILLOW_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_WILLOW_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_WILLOW_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_WILLOW_WOOD_FENCE_GATE);
-
-        family("Dead Log").stairs(BBWoodBlocks.DEAD_LOG_STAIRS).slab(BBWoodBlocks.DEAD_LOG_SLAB);
-        family("Stripped Dead Log").stairs(BBWoodBlocks.STRIPPED_DEAD_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_DEAD_LOG_SLAB);
-        family("Dead Wood").stairs(BBWoodBlocks.DEAD_WOOD_STAIRS).slab(BBWoodBlocks.DEAD_WOOD_SLAB).wall(BBWoodBlocks.DEAD_WOOD_WALL).fence(BBWoodBlocks.DEAD_WOOD_FENCE).fenceGate(BBWoodBlocks.DEAD_WOOD_FENCE_GATE);
-        family("Stripped Dead Wood").stairs(BBWoodBlocks.STRIPPED_DEAD_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_DEAD_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_DEAD_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_DEAD_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_DEAD_WOOD_FENCE_GATE);
-
-        family("Magic Log").stairs(BBWoodBlocks.MAGIC_LOG_STAIRS).slab(BBWoodBlocks.MAGIC_LOG_SLAB);
-        family("Stripped Magic Log").stairs(BBWoodBlocks.STRIPPED_MAGIC_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_MAGIC_LOG_SLAB);
-        family("Magic Wood").stairs(BBWoodBlocks.MAGIC_WOOD_STAIRS).slab(BBWoodBlocks.MAGIC_WOOD_SLAB).wall(BBWoodBlocks.MAGIC_WOOD_WALL).fence(BBWoodBlocks.MAGIC_WOOD_FENCE).fenceGate(BBWoodBlocks.MAGIC_WOOD_FENCE_GATE);
-        family("Stripped Magic Wood").stairs(BBWoodBlocks.STRIPPED_MAGIC_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_MAGIC_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_MAGIC_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_MAGIC_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_MAGIC_WOOD_FENCE_GATE);
-
-        family("Umbran Log").stairs(BBWoodBlocks.UMBRAN_LOG_STAIRS).slab(BBWoodBlocks.UMBRAN_LOG_SLAB);
-        family("Stripped Umbran Log").stairs(BBWoodBlocks.STRIPPED_UMBRAN_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_UMBRAN_LOG_SLAB);
-        family("Umbran Wood").stairs(BBWoodBlocks.UMBRAN_WOOD_STAIRS).slab(BBWoodBlocks.UMBRAN_WOOD_SLAB).wall(BBWoodBlocks.UMBRAN_WOOD_WALL).fence(BBWoodBlocks.UMBRAN_WOOD_FENCE).fenceGate(BBWoodBlocks.UMBRAN_WOOD_FENCE_GATE);
-        family("Stripped Umbran Wood").stairs(BBWoodBlocks.STRIPPED_UMBRAN_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_UMBRAN_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_UMBRAN_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_UMBRAN_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_UMBRAN_WOOD_FENCE_GATE);
-
-        family("Hellbark Log").stairs(BBWoodBlocks.HELLBARK_LOG_STAIRS).slab(BBWoodBlocks.HELLBARK_LOG_SLAB);
-        family("Stripped Hellbark Log").stairs(BBWoodBlocks.STRIPPED_HELLBARK_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_HELLBARK_LOG_SLAB);
-        family("Hellbark Wood").stairs(BBWoodBlocks.HELLBARK_WOOD_STAIRS).slab(BBWoodBlocks.HELLBARK_WOOD_SLAB).wall(BBWoodBlocks.HELLBARK_WOOD_WALL).fence(BBWoodBlocks.HELLBARK_WOOD_FENCE).fenceGate(BBWoodBlocks.HELLBARK_WOOD_FENCE_GATE);
-        family("Stripped Hellbark Wood").stairs(BBWoodBlocks.STRIPPED_HELLBARK_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_HELLBARK_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_HELLBARK_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_HELLBARK_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_HELLBARK_WOOD_FENCE_GATE);
-
-        family("Empyreal Log").stairs(BBWoodBlocks.EMPYREAL_LOG_STAIRS).slab(BBWoodBlocks.EMPYREAL_LOG_SLAB);
-        family("Stripped Empyreal Log").stairs(BBWoodBlocks.STRIPPED_EMPYREAL_LOG_STAIRS).slab(BBWoodBlocks.STRIPPED_EMPYREAL_LOG_SLAB);
-        family("Empyreal Wood").stairs(BBWoodBlocks.EMPYREAL_WOOD_STAIRS).slab(BBWoodBlocks.EMPYREAL_WOOD_SLAB).wall(BBWoodBlocks.EMPYREAL_WOOD_WALL).fence(BBWoodBlocks.EMPYREAL_WOOD_FENCE).fenceGate(BBWoodBlocks.EMPYREAL_WOOD_FENCE_GATE);
-        family("Stripped Empyreal Wood").stairs(BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_STAIRS).slab(BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_SLAB).wall(BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_WALL).fence(BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_FENCE).fenceGate(BBWoodBlocks.STRIPPED_EMPYREAL_WOOD_FENCE_GATE);
+//        family("Origin Oak Log").family(BBBlockFamilies.LOG.pick(BOPWoodTypes.ORIGIN_OAK).orElseThrow());
+//        family("Stripped Origin Oak Log").family(BBBlockFamilies.STRIPPED_LOG.pick(BOPWoodTypes.ORIGIN_OAK).orElseThrow());
+//        family("Origin Oak Wood").family(BBBlockFamilies.WOOD.pick(BOPWoodTypes.ORIGIN_OAK).orElseThrow());
+//        family("Stripped Origin Oak Wood").family(BBBlockFamilies.STRIPPED_WOOD.pick(BOPWoodTypes.ORIGIN_OAK).orElseThrow());
+//
+//        family("Fir Log").family(BBBlockFamilies.LOG.pick(BOPWoodTypes.FIR).orElseThrow());
+//        family("Stripped Fir Log").family(BBBlockFamilies.STRIPPED_LOG.pick(BOPWoodTypes.FIR).orElseThrow());
+//        family("Fir Wood").family(BBBlockFamilies.WOOD.pick(BOPWoodTypes.FIR).orElseThrow());
+//        family("Stripped Fir Wood").family(BBBlockFamilies.STRIPPED_WOOD.pick(BOPWoodTypes.FIR).orElseThrow());
+//
+//        family("Pine Log").family(BBBlockFamilies.PINE_LOG);
+//        family("Stripped Pine Log").family(BBBlockFamilies.STRIPPED_PINE_LOG);
+//        family("Pine Wood").family(BBBlockFamilies.PINE_WOOD);
+//        family("Stripped Pine Wood").family(BBBlockFamilies.STRIPPED_PINE_WOOD);
+//
+//        family("Maple Log").family(BBBlockFamilies.MAPLE_LOG);
+//        family("Stripped Maple Log").family(BBBlockFamilies.STRIPPED_MAPLE_LOG);
+//        family("Maple Wood").family(BBBlockFamilies.MAPLE_WOOD);
+//        family("Stripped Maple Wood").family(BBBlockFamilies.STRIPPED_MAPLE_WOOD);
+//
+//        family("Redwood Log").family(BBBlockFamilies.REDWOOD_LOG);
+//        family("Stripped Redwood Log").family(BBBlockFamilies.STRIPPED_REDWOOD_LOG);
+//        family("Redwood Wood").family(BBBlockFamilies.REDWOOD_WOOD);
+//        family("Stripped Redwood Wood").family(BBBlockFamilies.STRIPPED_REDWOOD_WOOD);
+//
+//        family("Mahogany Log").family(BBBlockFamilies.MAHOGANY_LOG);
+//        family("Stripped Mahogany Log").family(BBBlockFamilies.STRIPPED_MAHOGANY_LOG);
+//        family("Mahogany Wood").family(BBBlockFamilies.MAHOGANY_WOOD);
+//        family("Stripped Mahogany Wood").family(BBBlockFamilies.STRIPPED_MAHOGANY_WOOD);
+//
+//        family("Jacaranda Log").family(BBBlockFamilies.JACARANDA_LOG);
+//        family("Stripped Jacaranda Log").family(BBBlockFamilies.STRIPPED_JACARANDA_LOG);
+//        family("Jacaranda Wood").family(BBBlockFamilies.JACARANDA_WOOD);
+//        family("Stripped Jacaranda Wood").family(BBBlockFamilies.STRIPPED_JACARANDA_WOOD);
+//
+//        family("Palm Log").family(BBBlockFamilies.PALM_LOG);
+//        family("Stripped Palm Log").family(BBBlockFamilies.STRIPPED_PALM_LOG);
+//        family("Palm Wood").family(BBBlockFamilies.PALM_WOOD);
+//        family("Stripped Palm Wood").family(BBBlockFamilies.STRIPPED_PALM_WOOD);
+//
+//        family("Willow Log").family(BBBlockFamilies.WILLOW_LOG);
+//        family("Stripped Willow Log").family(BBBlockFamilies.STRIPPED_WILLOW_LOG);
+//        family("Willow Wood").family(BBBlockFamilies.WILLOW_WOOD);
+//        family("Stripped Willow Wood").family(BBBlockFamilies.STRIPPED_WILLOW_WOOD);
+//
+//        family("Dead Log").family(BBBlockFamilies.DEAD_LOG);
+//        family("Stripped Dead Log").family(BBBlockFamilies.STRIPPED_DEAD_LOG);
+//        family("Dead Wood").family(BBBlockFamilies.DEAD_WOOD);
+//        family("Stripped Dead Wood").family(BBBlockFamilies.STRIPPED_DEAD_WOOD);
+//
+//        family("Magic Log").family(BBBlockFamilies.MAGIC_LOG);
+//        family("Stripped Magic Log").family(BBBlockFamilies.STRIPPED_MAGIC_LOG);
+//        family("Magic Wood").family(BBBlockFamilies.MAGIC_WOOD);
+//        family("Stripped Magic Wood").family(BBBlockFamilies.STRIPPED_MAGIC_WOOD);
+//
+//        family("Umbran Log").family(BBBlockFamilies.UMBRAN_LOG);
+//        family("Stripped Umbran Log").family(BBBlockFamilies.STRIPPED_UMBRAN_LOG);
+//        family("Umbran Wood").family(BBBlockFamilies.UMBRAN_WOOD);
+//        family("Stripped Umbran Wood").family(BBBlockFamilies.STRIPPED_UMBRAN_WOOD);
+//
+//        family("Hellbark Log").family(BBBlockFamilies.HELLBARK_LOG);
+//        family("Stripped Hellbark Log").family(BBBlockFamilies.STRIPPED_HELLBARK_LOG);
+//        family("Hellbark Wood").family(BBBlockFamilies.HELLBARK_WOOD);
+//        family("Stripped Hellbark Wood").family(BBBlockFamilies.STRIPPED_HELLBARK_WOOD);
+//
+//        family("Empyreal Log").family(BBBlockFamilies.EMPYREAL_LOG);
+//        family("Stripped Empyreal Log").family(BBBlockFamilies.STRIPPED_EMPYREAL_LOG);
+//        family("Empyreal Wood").family(BBBlockFamilies.EMPYREAL_WOOD);
+//        family("Stripped Empyreal Wood").family(BBBlockFamilies.STRIPPED_EMPYREAL_WOOD);
 
     }
 }

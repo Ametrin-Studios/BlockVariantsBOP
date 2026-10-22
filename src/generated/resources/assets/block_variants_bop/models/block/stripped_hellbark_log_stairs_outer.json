@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/outer_stairs",
+  "parent": "block_variants:block/outer_log_stairs",
   "textures": {
     "bottom": "biomesoplenty:block/stripped_hellbark_log_top",
     "side": "biomesoplenty:block/stripped_hellbark_log",

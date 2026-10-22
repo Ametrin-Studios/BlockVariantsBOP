@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "block_variants_bop:redwood_wood_wall_from_redwood_log"
+        "recipes": "block_variants_bop:redwood_wood_wall_from_redwood_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

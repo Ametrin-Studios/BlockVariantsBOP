@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "block_variants_bop:stripped_hellbark_wood_fence_from_stripped_hellbark_log"
+        "recipes": "block_variants_bop:stripped_hellbark_wood_fence_from_stripped_hellbark_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
