@@ -16,6 +16,9 @@
 ## 1.1.0
 - variants for Origin Oak
 
+## 1.0.3
+- (1.21.1) Ametrin API compatibility
+
 ## 1.0.2
 - (1.21.1) fix open fence gates breakable by water
 
