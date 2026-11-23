@@ -63,11 +63,6 @@ configurations {
 repositories {
     mavenLocal()
 
-    maven {
-        name "Ametrin Studios Maven"
-        url "https://github.com/Ametrin-Studios/maven/raw/main/"
-    }
-
     exclusiveContent {
         forRepository {
             maven {
@@ -78,10 +73,17 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        name "Ametrin Studios Maven"
+        url "https://github.com/Ametrin-Studios/maven/raw/main/"
+    }
+    maven {
+        url uri(rootProject.file("../maven"))
+    }
 }
 
 dependencies {
-    implementation "com.ametrinstudios:ametrin:${minecraft_version}-${ametrin_version}"
+    implementation "com.ametrinstudios:ametrin-${minecraft_version}:${ametrin_version}"
     implementation "com.ametrinstudios:block_variants:${minecraft_version}-${bv_version}"
     implementation "curse.maven:biomes-o-plenty-220318:8288121"
     localRuntime "curse.maven:terrablender-neoforge-940057:6054947" // https://www.curseforge.com/minecraft/mc-mods/terrablender-neoforge/files/all

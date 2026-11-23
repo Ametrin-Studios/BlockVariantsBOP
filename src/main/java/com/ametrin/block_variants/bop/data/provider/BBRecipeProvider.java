@@ -10,18 +10,18 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
-import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
 
 public final class BBRecipeProvider extends ExtendedRecipeProvider {
     private RecipeOutput output;
     public BBRecipeProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
-        super(packOutput, BlockVariantsBOPIntegration.MOD_ID, registries);
+        super(BlockVariantsBOPIntegration.MOD_ID, packOutput, registries);
     }
 
-    @Override
-    protected void buildRecipes(@NotNull RecipeOutput output) {
+    @Override @ParametersAreNonnullByDefault
+    protected void buildRecipes(RecipeOutput output, HolderLookup.Provider registries) {
         this.output = output;
 
         stairSlabWall(BBBlocks.FLESH_STAIRS.get(), BBBlocks.FLESH_SLAB.get(), BBBlocks.FLESH_WALL.get(), BOPBlocks.FLESH, false);
